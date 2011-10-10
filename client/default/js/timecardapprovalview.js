@@ -14,7 +14,7 @@ function loadCurrentTimecardApproval()
 
 	var listheight = winheight - 90;
 	$("#TimecardApprovalForm").css("height", listheight + "px").css("overflow", "auto");
-	alert(test)
+	
 	$fh.act({
 		act : 'getCurrentTimecardApproval',
 		secure : true,
