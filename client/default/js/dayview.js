@@ -194,4 +194,49 @@ $('#WorkWeekCalendar').live('pagecreate', function(event) {
 		}
 	});
 	
+	$("#btnSubmitTimecardApproval").click(
+			function()
+			{
+				$.mobile.changePage($("#submitTimecardApprovalDialog"));
+			});
+	
+	$("#btnConfirmNo").click(
+			function()
+			{
+				$.mobile.changePage($("#WorkWeekCalendar"));
+			});
+	
+	$("#btnConfirmYes").click(
+			function()
+			{
+				$.mobile.showPageLoadingMsg();
+				var guid = "somemagicguid";
+				var req = {
+					"guid" : guid
+				};
+				
+				$fh.act({
+					act : 'submitTimecardApproval',
+					secure : true,
+					req : req
+				}, function(res) {
+					if (res.success)
+						$.mobile.changePage($("#WorkWeekCalendar"), {
+							reverse : true
+						});
+					else {
+						$("#errorList").html("");
+
+						for ( var i in res.messages) {
+							$("<li>" + res.messages[i] + "</li>")
+									.appendTo($("#errorList"));
+						}
+						$.mobile.changePage($("#Validation"), {
+							transition : "pop"
+						});
+					}
+					$.mobile.hidePageLoadingMsg();
+				});
+			});
+	
 });
