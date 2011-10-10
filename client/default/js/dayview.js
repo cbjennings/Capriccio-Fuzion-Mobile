@@ -10,7 +10,7 @@ function roundNumber(num, dec) {
 function setDate(d) {
 	var curr_date = d.getDate();
 	var curr_month = d.getMonth();
-	$("#WorkWeekCalendar").data("currdate", d);
+	$("#DayViewCalendar").data("currdate", d);
 	curr_month++;
 	var curr_year = d.getFullYear();
 	$("#fkDate").val(curr_year + "-" + curr_month + "=" + curr_date);
@@ -153,29 +153,29 @@ function goDay(date) {
 					});
 }
 
-$('#WorkWeekCalendar').live('pagecreate', function(event) {
+$('#DayViewCalendar').live('pagecreate', function(event) {
 	
 	goDay(new Date());
-	$('#WorkWeekCalendar').live('swiperight', function(event) {
-		var d = $("#WorkWeekCalendar").data("currdate");
+	$('#DayViewCalendar').live('swiperight', function(event) {
+		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() - 1);
 		goDay(d);
 	});
 	
-	$('#WorkWeekCalendar').live('swipeleft', function(event) {
-		var d = $("#WorkWeekCalendar").data("currdate");
+	$('#DayViewCalendar').live('swipeleft', function(event) {
+		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() + 1);
 		goDay(d);
 	});
 
 	$("#btnDayPrev").click(function() {
-		var d = $("#WorkWeekCalendar").data("currdate");
+		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() - 1);
 		goDay(d);
 	});
 	
 	$("#btnDayNext").click(function() {
-		var d = $("#WorkWeekCalendar").data("currdate");
+		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() + 1);
 		goDay(d);
 	});
@@ -194,6 +194,10 @@ $('#WorkWeekCalendar').live('pagecreate', function(event) {
 		}
 	});
 	
+	$("#btnNewTimecard").click(function() {
+		loadTimecard(new Date($("#fkDate").val()));
+	});
+	
 	$("#btnSubmitTimecardApproval").click(
 			function()
 			{
@@ -203,7 +207,7 @@ $('#WorkWeekCalendar').live('pagecreate', function(event) {
 	$("#btnConfirmNo").click(
 			function()
 			{
-				$.mobile.changePage($("#WorkWeekCalendar"));
+				$.mobile.changePage($("#DayViewCalendar"));
 			});
 	
 	$("#btnConfirmYes").click(
@@ -221,7 +225,7 @@ $('#WorkWeekCalendar').live('pagecreate', function(event) {
 					req : req
 				}, function(res) {
 					if (res.success)
-						$.mobile.changePage($("#WorkWeekCalendar"), {
+						$.mobile.changePage($("#DayViewCalendar"), {
 							reverse : true
 						});
 					else {

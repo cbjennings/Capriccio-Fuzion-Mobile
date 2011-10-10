@@ -6,13 +6,11 @@ $("#TimecardDetail").live(
 		'pagecreate',
 		function() {
 			$("#btnCloseTimecard").click(function() {
-				$.mobile.changePage($("#WorkWeekCalendar"), {
+				$.mobile.changePage($("#DayViewCalendar"), {
 					reverse : true
 				});
 			});
-			$("#btnNewTimecard").click(function() {
-				loadTimecard(new Date($("#fkDate").val()));
-			});
+
 			
 			$("#btnSaveTimecard").click(
 					function() {
@@ -45,7 +43,7 @@ $("#TimecardDetail").live(
 							req : req
 						}, function(res) {
 							if (res.success)
-								$.mobile.changePage($("#WorkWeekCalendar"), {
+								$.mobile.changePage($("#DayViewCalendar"), {
 									reverse : true
 								});
 							else {
