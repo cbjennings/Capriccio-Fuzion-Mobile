@@ -64,7 +64,7 @@ function goDay(date) {
 							var one_hour = 1000 * 60 * 60;
 							var TimeSpan = roundNumber(
 									(endon.getTime() - starton.getTime())
-											/ (one_hour), 2)
+											/ (one_hour), 2);
 							var prevEnd;
 
 							prevEnd = new Date(starton);

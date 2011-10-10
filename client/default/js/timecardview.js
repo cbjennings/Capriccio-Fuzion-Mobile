@@ -89,8 +89,17 @@ function loadTimecard(id) {
 					(starton.getMonth() + 1) + "/" + starton.getDate() + "/"
 							+ starton.getFullYear());
 			// alert($("#TimecardFullDate").val());
-			$("#txtStartOn").val(formatTime(new Date(res.timecard.starton)));
-			$("#txtEndOn").val(formatTime(new Date(res.timecard.endon)));
+			var dtStartOn=new Date(res.timecard.starton);
+			var dtEndOn=new Date(res.timecard.endon);
+			var one_hour = 1000 * 60 * 60;
+			var TimeSpan = roundNumber(
+					(endon.getTime() - starton.getTime())
+							/ (one_hour), 2);
+			$("#txtStartOn").val(formatTime(dtStartOn));
+			$("#txtEndOn").val(formatTime(dtEndOn));
+			
+			$("#TimecardDetailHeader").text(TimeSpan + " hours - " + res.timecard.comments)
+			
 			$("#txtComments").text(res.timecard.comments);
 
 			$("#txtChargeNumber").html("").append(
@@ -118,6 +127,8 @@ function loadTimecard(id) {
 			$("#mileageList").live('click', function() {
 				loadMileage($("#txtId").val());
 			});
+			
+			
 			$.mobile.hidePageLoadingMsg();
 		});
 	} else {
@@ -154,6 +165,7 @@ function loadTimecard(id) {
 			$("#txtStartOn").val("");
 			$("#txtEndOn").val("");
 			$("#txtComments").text("");
+			$("#TimecardDetailHeader").text("New Timecard");
 			$.mobile.hidePageLoadingMsg();
 		});
 	}
