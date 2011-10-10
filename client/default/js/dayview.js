@@ -200,7 +200,6 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 
 	$("#btnViewTimecardApproval").click(function() {
 		loadTimecardApproval();
-		};
 	});
 
 });
