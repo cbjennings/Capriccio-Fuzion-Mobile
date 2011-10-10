@@ -31,12 +31,12 @@ function loadCurrentTimecardApproval()
 	$.mobile.hidePageLoadingMsg();
 }
 
-$("#TimecardDetail").live(
+$("#TimecardApprovalDetail").live(
 		'pagecreate',
 		function() {
 			$("btnSubmitTimecardApproval").click(function() {
 				$.mobile.changePage($("#TimecardApprovalDialog"), {
-					transition : "pop" }
+					transition : "pop"
 				});
 			});
 
