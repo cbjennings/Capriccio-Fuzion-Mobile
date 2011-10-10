@@ -89,14 +89,14 @@ function loadTimecard(id) {
 					(starton.getMonth() + 1) + "/" + starton.getDate() + "/"
 							+ starton.getFullYear());
 			// alert($("#TimecardFullDate").val());
-			var dtStartOn=new Date(res.timecard.starton);
-			var dtEndOn=new Date(res.timecard.endon);
+			
+			var endon=new Date(res.timecard.endon);
 			var one_hour = 1000 * 60 * 60;
 			var TimeSpan = roundNumber(
 					(endon.getTime() - starton.getTime())
 							/ (one_hour), 2);
-			$("#txtStartOn").val(formatTime(dtStartOn));
-			$("#txtEndOn").val(formatTime(dtEndOn));
+			$("#txtStartOn").val(formatTime(starton));
+			$("#txtEndOn").val(formatTime(endon));
 			
 			$("#TimecardDetailHeader").text(TimeSpan + " hours - " + res.timecard.comments)
 			
