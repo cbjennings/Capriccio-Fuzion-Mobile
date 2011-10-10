@@ -219,7 +219,7 @@
       $.mobile.showPageLoadingMsg();
       var starton = new Date($("#TimecardFullDate").val() + " " + $("#txtStartOn").val());
       var endon = new Date($("#TimecardFullDate").val() + " " + $("#txtEndOn").val());
-      alert($("#TimecardFullDate").val());
+      //alert($("#TimecardFullDate").val());
       if($("#txtStartOn").val()=="") starton="";
       if($("#txtEndOn").val()=="") endon="";
       
@@ -275,9 +275,9 @@
         },
         function(res) {
           var starton=new Date(res.timecard.starton);
-          alert(starton);
+          //alert(starton);
           $("#TimecardFullDate").val((starton.getMonth()+1) + "/" + starton.getDate() + "/" + starton.getFullYear());
-          alert($("#TimecardFullDate").val());
+          //alert($("#TimecardFullDate").val());
           $("#txtStartOn").val(formatTime(new Date(res.timecard.starton)));
           $("#txtEndOn").val(formatTime(new Date(res.timecard.endon)));
           $("#txtComments").text(res.timecard.comments);

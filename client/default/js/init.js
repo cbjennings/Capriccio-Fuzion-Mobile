@@ -56,5 +56,5 @@ $fh.ready(function() {
     } 
   });
   if(user&&pass&&company) $("#btnLogin").click(); 
-  $( '#WorkWeekCalendar' ).live( 'pageinit',function(event){ alert('here');});
+  $( '#WorkWeekCalendar' ).live( 'pageinit',function(event){ });
 });
