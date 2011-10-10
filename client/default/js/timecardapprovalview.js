@@ -18,9 +18,7 @@ function loadCurrentTimecardApproval()
 	$fh.act({
 		act : 'getCurrentTimecardApproval',
 		secure : true,
-		req : {
-			id : id
-		}
+		req : {}
 	}, function(res) {
 		$("#totalHoursReq").text(res.timecardApproval.totalHoursReq);
 		$("#totalHours").text(res.timecardApproval.totalHours);
