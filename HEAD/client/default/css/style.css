@@ -1,0 +1,54 @@
+body {
+  font-family:arial, sans-serif;
+  font-size:14px;
+}
+
+.ui-header .ui-title, .ui-footer .ui-title {
+   margin:.6em .6em .8em; 
+}
+.ui-content .ui-listview { margin:0; }
+.ui-li .ui-btn-inner a.ui-link-inherit, .ui-li-static.ui-li {
+  padding-right: .7em;
+}
+.spacer {
+ clear:both;
+ height:10px;
+ width:1px; 
+}
+
+.ui-input-datebox span.ui-icon {
+   margin-top:-22px; 
+}
+
+#entryList-contain {
+  background-image: url(cal_back.png);
+  background-repeat:no-repeat;
+  background-position:left top;
+}
+
+#entryList-contain li {
+ overflow:hidden;
+}
+
+#entryList-contain .ui-li-aside, #entryList-contain h6 {
+   font-size:12px; 
+}
+
+#entryList-contain .ui-li-aside {
+  margin-right:0; 
+}
+
+#entryList-contain a.ui-link-inherit {
+  padding: 1px 25px 5px 5px; 
+}
+
+#entryList-contain p.ui-li-desc {
+    width:100%;
+}
+
+#entryList-contain span.ui-icon {
+   top:2px;
+ right:2px; 
+  margin-top:0;
+}
+
