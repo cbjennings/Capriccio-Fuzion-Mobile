@@ -44,7 +44,7 @@ $fh.ready(function() {
               $fh.data({act:'save', key:'password', val:''});
             }
             $.mobile.hidePageLoadingMsg();
-            $.mobile.changePage($("#WorkWeekCalendar"));
+            $.mobile.changePage($("#DayViewCalendar"));
           }
         },
         function(res) {
@@ -56,5 +56,5 @@ $fh.ready(function() {
     } 
   });
   if(user&&pass&&company) $("#btnLogin").click(); 
-  $( '#WorkWeekCalendar' ).live( 'pageinit',function(event){ });
+  $( '#DayViewCalendar' ).live( 'pageinit',function(event){ });
 });
