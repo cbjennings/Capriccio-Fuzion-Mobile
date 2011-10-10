@@ -16,6 +16,10 @@ body {
  width:1px; 
 }
 
+form {
+	padding:0;	
+}
+
 .ui-input-datebox span.ui-icon {
    margin-top:-22px; 
 }

@@ -137,28 +137,24 @@
 
 	<div data-role="content">
 		<form id="TimecardApprovalForm">
-			<table>
-				<tr>
-					<td>Total Hours Required:</td>
-					<td><input type="text" name="totalHoursReq" id="txtId"
-						value="" /></td>
-				</tr>
-				<tr>
-					<td>Total Hours:</td>
-					<td><input type="text" name="totalHours" id="totalHours" value="" />
-					</td>
-				</tr>
-				<tr>
-					<td>Total Chargeable Hours:</td>
-					<td><input type="text" name="totalChargeHours" id="totalChargeHours"
-						value="" /></td>
-				</tr>
-				<tr>
-					<td>Total Exclusion Hours:</td>
-					<td><input type="text" name="totalExclHours" id="totalExclHours"
-						value="" /></td>
-				</tr>
-			</table>
+			<ul data-role="listview">
+				<li  data-role="fieldcontain">
+					<label for="totalHoursReq">Total Hours Required:</label>
+					<input type="text" name="totalHoursReq" id="totalHoursReq" value="" />
+				</li>
+				<li data-role="fieldcontain">
+					<label for="totalHours">Total Hours:</label>
+					<input type="text" name="totalHours" id="totalHours" value="" />
+				</li>
+				<li data-role="fieldcontain">
+					<label for="totalChargeHours">Total Chargeable Hours:</label>
+					<td><input type="text" name="totalChargeHours" id="totalChargeHours" value="" />
+				</li>
+				<li data-role="fieldcontain">
+					<label for="totalExclHours">Total Exclusion Hours:</label>
+					<input type="text" name="totalExclHours" id="totalExclHours" value="" />
+				</li>
+			</ul>
 			<a href="#" id="btnSubmitTimecardApproval" data-role="button"
 				data-icon="gear" data-iconpos="left" data-inline="true"
 				style="z-index: 1000; position: absolute; left: 0; bottom: 0;">Submit</a>
