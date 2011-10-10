@@ -21,6 +21,7 @@ function setDate(d) {
 	$("#HeaderDate").text(curr_month + "/" + curr_date + "/" + curr_year);
 
 }
+
 function goDay(date) {
 	$.mobile.showPageLoadingMsg();
 	setDate(date);
@@ -151,13 +152,16 @@ function goDay(date) {
 						$.mobile.hidePageLoadingMsg();
 					});
 }
+
 $('#WorkWeekCalendar').live('pagecreate', function(event) {
+	
 	goDay(new Date());
 	$('#WorkWeekCalendar').live('swiperight', function(event) {
 		var d = $("#WorkWeekCalendar").data("currdate");
 		d.setDate(d.getDate() - 1);
 		goDay(d);
 	});
+	
 	$('#WorkWeekCalendar').live('swipeleft', function(event) {
 		var d = $("#WorkWeekCalendar").data("currdate");
 		d.setDate(d.getDate() + 1);
@@ -169,6 +173,7 @@ $('#WorkWeekCalendar').live('pagecreate', function(event) {
 		d.setDate(d.getDate() - 1);
 		goDay(d);
 	});
+	
 	$("#btnDayNext").click(function() {
 		var d = $("#WorkWeekCalendar").data("currdate");
 		d.setDate(d.getDate() + 1);
@@ -178,7 +183,7 @@ $('#WorkWeekCalendar').live('pagecreate', function(event) {
 	$("#HeaderDate").click(function() {
 		$("#fkDate").datebox("open");
 	});
-
+	
 	$('#fkDate').bind('datebox', function(e, p) {
 		if (p.method === 'set') {
 
@@ -188,5 +193,5 @@ $('#WorkWeekCalendar').live('pagecreate', function(event) {
 			goDay(d);
 		}
 	});
-
+	
 });

@@ -1,122 +1,136 @@
 
-<link rel="stylesheet" type="text/css" href="resources/jQuery_Mobile-1.0b1/jQuery_Mobile-1.0rc1.min.css" />
-<link href="resources/jQuery_Mobile-1.0b1/datebox.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css"
+	href="resources/jQuery_Mobile-1.0b1/jQuery_Mobile-1.0rc1.min.css" />
+<link href="resources/jQuery_Mobile-1.0b1/datebox.min.css"
+	rel="stylesheet" type="text/css" />
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 
 <!-- Test -->
 <!-- login page -->
 <div data-role="page" data-theme="b" id="Login">
-  <div data-role="header">
-    <h1>Login</h1>
-  </div>
+	<div data-role="header">
+		<h1>Login</h1>
+	</div>
 
-  <div data-role="content" id="login">  
-    <form>
-      <ul data-role="listview">
-        <li data-role="fieldcontain">
-              <label for="txtUsername">User Name:</label>
-              <input type="text" name="txtUsername" id="txtUsername" value=""  />
-        </li>
-        <li data-role="fieldcontain">
-            <label for="txtPassword">Password:</label>
-            <input type="password" name="txtPassword" id="txtPassword" value=""  />
-        </li>
-        <li data-role="fieldcontain">
-            <label for="txtCompany">Company ID:</label>
-            <input type="text" name="txtCompany" id="txtCompany" />
-        </li>
-        <li data-role="fieldcontain">
-            <input type="checkbox" name="chkStorePassword" id="chkStorePassword" />
-            <label for="chkStorePassword"> Store Password?</label>
-        </li>
-      </ul>
-      <div class="spacer"></div>
-      <a href="#" id="btnLogin" data-role="button" data-icon="arrow-r" data-iconpos="right" data-inline="true" style="float:right;">Log In</a>
-    </form>
-  </div>
-</div> 
+	<div data-role="content" id="login">
+		<form>
+			<ul data-role="listview">
+				<li data-role="fieldcontain"><label for="txtUsername">User
+						Name:</label> <input type="text" name="txtUsername" id="txtUsername"
+					value="" /></li>
+				<li data-role="fieldcontain"><label for="txtPassword">Password:</label>
+					<input type="password" name="txtPassword" id="txtPassword" value="" />
+				</li>
+				<li data-role="fieldcontain"><label for="txtCompany">Company
+						ID:</label> <input type="text" name="txtCompany" id="txtCompany" /></li>
+				<li data-role="fieldcontain"><input type="checkbox"
+					name="chkStorePassword" id="chkStorePassword" /> <label
+					for="chkStorePassword"> Store Password?</label></li>
+			</ul>
+			<div class="spacer"></div>
+			<a href="#" id="btnLogin" data-role="button" data-icon="arrow-r"
+				data-iconpos="right" data-inline="true" style="float: right;">Log
+				In</a>
+		</form>
+	</div>
+</div>
 
-<div data-role="page" data-theme="b" id="WorkWeekCalendar"> 
-  <div data-role="header">
-    <a href="#" data-role="button" data-icon="arrow-l" id="btnDayPrev" data-inline="true" data-iconpos="notext">Previous Day</a>
-    <h1 id="HeaderDate"></h1>
-    <a href="#" data-role="button" data-icon="arrow-r" id="btnDayNext" data-inline="true" data-iconpos="notext">Next Day</a>
-    <span style="display:none;">
-      <input name="fkDate" id="fkDate" type="date" data-role="datebox" data-options='{"useDialogForceFalse": true,"mode": "calbox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}' data-theme='b' style="display:none;" />
-    </span>
-  </div>
-  
-  <div data-role="content" style="padding:0;margin:0;"> 
-    <div id="entryList-contain" style="margin:0;padding:0;"></div>
-     <br />
-    <a href="#" id="btnNewTimecard" data-role="button" data-icon="plus" data-iconpos="left" data-inline="true" style="z-index:1000;position:absolute;right:0;bottom:0;">New</a>
-  </div>
+<div data-role="page" data-theme="b" id="WorkWeekCalendar">
+	<div data-role="header">
+		<a href="#" data-role="button" data-icon="arrow-l" id="btnDayPrev"
+			data-inline="true" data-iconpos="notext">Previous Day</a>
+		<h1 id="HeaderDate"></h1>
+		<a href="#" data-role="button" data-icon="arrow-r" id="btnDayNext"
+			data-inline="true" data-iconpos="notext">Next Day</a> <span
+			style="display: none;"> <input name="fkDate" id="fkDate"
+			type="date" data-role="datebox"
+			data-options='{"useDialogForceFalse": true,"mode": "calbox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
+			data-theme='b' style="display: none;" /> </span>
+	</div>
+
+	<div data-role="content" style="padding: 0; margin: 0;">
+		<div id="entryList-contain" style="margin: 0; padding: 0;"></div>
+		<br /> 
+		<a href="#" id="btnNewTimecard" data-role="button"
+			data-icon="plus" data-iconpos="left" data-inline="true"
+			style="z-index: 1000; position: absolute; right: 0; bottom: 0;">New</a>
+		<a href="#" id="btnSubmitTimecardApproval" data-role="button"
+			date-icon="check" data-iconpos="left" data-inline="true"
+			style="z-index: 1000; position: absolute; left: 0; bottom: 0;">Submit Timecard</a>
+	</div>
 </div>
 
 
 
 <!-- Timecard Detail -->
-<script type="text/javascript"> 
-  
-</script>
-<div data-role="page" data-theme="b" id="TimecardDetail"> 
-  <div data-role="header">
-    <h1 id="TimecardDetailHeader">Timecard- 4 Hours Coding</h1>
-  </div>
-  
-  <div data-role="content" style="padding:0;margin:0;"> 
-    <input type="text" id="TimecardFullDate" style="display:none;" />
-    <form>
-      <ul data-role="listview" id="TimeCardForm">
-        <li data-role="fieldcontain" style="display:none;"> 
-          <label for="txtId">ID:</label>
-          <input type="text" name="txtId" id="txtId" value=""  />
-        </li>
-        <li data-role="fieldcontain"> 
-          <label for="txtStartOn">Start On:</label>
-          <input type="date" data-role="datebox"  data-options='{"useDialogForceFalse": true,"mode": "timebox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}' name="txtStartOn" id="txtStartOn" value=""  />
-        </li>
-        <li data-role="fieldcontain"> 
-          <label for="txtEndOn">End On:</label>
-          <input type="date" data-role="datebox"  data-options='{"useDialogForceFalse": true,"mode": "timebox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}' name="txtEndOn" id="txtEndOn" value=""  />
-        </li>
-        <li data-role="fieldcontain"> 
-          <label for="txtChargeNumber">Charge Number:</label>
-          <select name="txtChargeNumber" id="txtChargeNumber">
-            <option value=""></option>
-          </select>
-        </li>
-        <li data-role="fieldcontain"> 
-          <label for="txtReason">Reason:</label>
-          <select name="txtReason" id="txtReason" value="" >
-            <option value=""></option>
-          </select>
-        </li>
-        <li data-role="fieldcontain"> 
-          <label for="txtComments">Comments:</label>
-          <textarea name="txtComments" id="txtComments"></textarea>
-        </li>
-        <li id="mileageList" class="button-up-c" style="display:none;"> 
-          Mileage Reports
-          <span class="ui-icon ui-icon-arrow-r ui-icon-shadow" style="float:right;">&nbsp;</span>
-        </li>
-      </ul>
-    </form>
-    <a href="#" id="btnCloseTimecard" data-role="button" data-icon="delete" data-iconpos="left" data-inline="true" style="z-index:1000;position:absolute;left:0;bottom:0;">Close</a>
-    <a href="#" id="btnSaveTimecard" data-role="button" data-icon="check" data-iconpos="left" data-inline="true" style="z-index:1000;position:absolute;right:0;bottom:0;">Save</a>
-  </div>
+<div data-role="page" data-theme="b" id="TimecardDetail">
+	<div data-role="header">
+		<h1 id="TimecardDetailHeader">Timecard- 4 Hours Coding</h1>
+	</div>
+
+	<div data-role="content" style="padding: 0; margin: 0;">
+		<input type="text" id="TimecardFullDate" style="display: none;" />
+		<form>
+			<ul data-role="listview" id="TimeCardForm">
+				<li data-role="fieldcontain" style="display: none;"><label
+					for="txtId">ID:</label> <input type="text" name="txtId" id="txtId"
+					value="" /></li>
+				<li data-role="fieldcontain"><label for="txtStartOn">Start
+						On:</label> <input type="date" data-role="datebox"
+					data-options='{"useDialogForceFalse": true,"mode": "timebox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
+					name="txtStartOn" id="txtStartOn" value="" /></li>
+				<li data-role="fieldcontain"><label for="txtEndOn">End
+						On:</label> <input type="date" data-role="datebox"
+					data-options='{"useDialogForceFalse": true,"mode": "timebox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
+					name="txtEndOn" id="txtEndOn" value="" /></li>
+				<li data-role="fieldcontain"><label for="txtChargeNumber">Charge
+						Number:</label> <select name="txtChargeNumber" id="txtChargeNumber">
+						<option value=""></option>
+				</select></li>
+				<li data-role="fieldcontain"><label for="txtReason">Reason:</label>
+					<select name="txtReason" id="txtReason" value="">
+						<option value=""></option>
+				</select></li>
+				<li data-role="fieldcontain"><label for="txtComments">Comments:</label>
+					<textarea name="txtComments" id="txtComments"></textarea></li>
+				<li id="mileageList" class="button-up-c" style="display: none;">
+					Mileage Reports <span
+					class="ui-icon ui-icon-arrow-r ui-icon-shadow"
+					style="float: right;">&nbsp;</span></li>
+			</ul>
+		</form>
+		<a href="#" id="btnCloseTimecard" data-role="button"
+			data-icon="delete" data-iconpos="left" data-inline="true"
+			style="z-index: 1000; position: absolute; left: 0; bottom: 0;">Close</a>
+		<a href="#" id="btnSaveTimecard" data-role="button" data-icon="check"
+			data-iconpos="left" data-inline="true"
+			style="z-index: 1000; position: absolute; right: 0; bottom: 0;">Save</a>
+	</div>
 </div>
 
 <div data-role="dialog" id="Validation" data-theme="b">
-  <div data-role="header">
-    <h1>Error</h1>
-  </div>
-  <div data-role="content">
-    <ul id="errorList"></ul>
-  </div>
+	<div data-role="header">
+		<h1>Error</h1>
+	</div>
+	<div data-role="content">
+		<ul id="errorList"></ul>
+	</div>
 </div>
+
+<div data-role="dialog" id="submitTimecardApprovalDialog">
+		<div data-role="header" data-theme="d">
+			<h1>Submit Timecard Approval Dialog</h1>
+		</div>
+
+		<div data-role="content" data-theme="c">
+			<h1>Are you sure you want to submit this timecard approval?</h1>
+			<a href="#" id="btnConfimYes" data-role="button" data-inline="true" data-theme="e">Yes</a>
+			<a href="#" id="btnConfimNo" data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a>
+		</div>
+</div>
+
 <script src="js/init.js" type="text/javascript"></script>
 <script src="js/dayview.js" type="text/javascript"></script>
 <script src="js/timecardview.js" type="text/javascript"></script>
 <script src="resources/jQuery_Mobile-1.0b1/jQuery_Mobile-1.0rc1.min.js" type="text/javascript"></script>
-      <script src="resources/jQuery_Mobile-1.0b1/datebox.min.js" type="text/javascript"></script>
+<script src="resources/jQuery_Mobile-1.0b1/datebox.min.js" type="text/javascript"></script>

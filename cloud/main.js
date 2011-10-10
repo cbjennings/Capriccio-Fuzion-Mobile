@@ -123,3 +123,14 @@ function newTimecard(req) {
   //$fh.log('newTimecard ret', ret);
   return ret;
 }
+
+function submitTimecardApproval(req) {
+	$fh.log('saveTimecard req',req);
+	
+	/**
+	 * Do funky web service magic in here to get a real return value.
+	 */
+	var ret={"success":true, "messages":[]};
+	ret.messages.push("Timecard Approval Successfully submitted");
+	return ret;
+}
