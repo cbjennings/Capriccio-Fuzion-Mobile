@@ -231,7 +231,6 @@ function submitTimecardApproval(req) {
 
 function getCurrentTimecardApproval(req) {
 	//$fh.log('getTimecardApproval req',req);
-	//Do magic web service call here to fill in these values.
 	var guid = "42";
 	var totalHoursReq = 88;
 	var totalHours = 80;

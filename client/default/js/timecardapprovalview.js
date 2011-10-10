@@ -14,12 +14,13 @@ function loadCurrentTimecardApproval()
 
 	var listheight = winheight - 90;
 	$("#TimecardApprovalForm").css("height", listheight + "px").css("overflow", "auto");
-	
+	alert(test)
 	$fh.act({
 		act : 'getCurrentTimecardApproval',
 		secure : true,
 		req : {}
 	}, function(res) {
+		alert(res);
 		$("#totalHoursReq").text(res.timecardApproval.totalHoursReq);
 		$("#totalHours").text(res.timecardApproval.totalHours);
 		$("#totalChargeHours").text(res.timecardApproval.totalHours);
