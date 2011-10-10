@@ -20,7 +20,7 @@ function loadCurrentTimecardApproval()
 		secure : true,
 		req : {}
 	}, function(res) {
-		alert(JSON.stringify(res));
+		//alert(JSON.stringify(res));
 		$("#totalHoursReq").val(res.timecardApproval.totalHoursReq);
 		$("#totalHours").val(res.timecardApproval.totalHours);
 		$("#totalChargeHours").val(res.timecardApproval.totalHours);
