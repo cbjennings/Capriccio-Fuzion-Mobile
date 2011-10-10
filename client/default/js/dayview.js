@@ -154,14 +154,14 @@ function goDay(date) {
 }
 
 $('#DayViewCalendar').live('pagecreate', function(event) {
-	
+
 	goDay(new Date());
 	$('#DayViewCalendar').live('swiperight', function(event) {
 		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() - 1);
 		goDay(d);
 	});
-	
+
 	$('#DayViewCalendar').live('swipeleft', function(event) {
 		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() + 1);
@@ -173,7 +173,7 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 		d.setDate(d.getDate() - 1);
 		goDay(d);
 	});
-	
+
 	$("#btnDayNext").click(function() {
 		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() + 1);
@@ -183,7 +183,7 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 	$("#HeaderDate").click(function() {
 		$("#fkDate").datebox("open");
 	});
-	
+
 	$('#fkDate').bind('datebox', function(e, p) {
 		if (p.method === 'set') {
 
@@ -193,48 +193,15 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 			goDay(d);
 		}
 	});
-	
+
 	$("#btnNewTimecard").click(function() {
 		loadTimecard(new Date($("#fkDate").val()));
 	});
-	
-	$("#btnViewTimecardApproval").click(
-			function()
-			{
-				$.mobile.changePage($("#pg_TimecardApproval"));
-			});
-	
-	$("#btnConfirmYes").click(
-			function()
-			{
-				$.mobile.showPageLoadingMsg();
-				var guid = "somemagicguid";
-				var req = {
-					"guid" : guid
-				};
-				
-				$fh.act({
-					act : 'submitTimecardApproval',
-					secure : true,
-					req : req
-				}, function(res) {
-					if (res.success)
-						$.mobile.changePage($("#DayViewCalendar"), {
-							reverse : true
-						});
-					else {
-						$("#errorList").html("");
 
-						for ( var i in res.messages) {
-							$("<li>" + res.messages[i] + "</li>")
-									.appendTo($("#errorList"));
-						}
-						$.mobile.changePage($("#Validation"), {
-							transition : "pop"
-						});
-					}
-					$.mobile.hidePageLoadingMsg();
-				});
-			});
-	
+	$("#btnViewTimecardApproval").click(function() {
+		$.mobile.changePage($("#TimecardApprovalDetail"), {
+			transition : "pop"
+		});
+	});
+
 });
