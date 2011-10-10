@@ -3,6 +3,10 @@ body {
   font-size:14px;
 }
 
+.ui-content { 
+	padding:0;
+}
+
 .ui-header .ui-title, .ui-footer .ui-title {
    margin:.6em .6em .8em; 
 }
