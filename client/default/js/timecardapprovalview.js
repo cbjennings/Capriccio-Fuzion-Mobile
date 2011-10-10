@@ -21,10 +21,10 @@ function loadCurrentTimecardApproval()
 		req : {}
 	}, function(res) {
 		alert(JSON.stringify(res));
-		$("#totalHoursReq").text(res.timecardApproval.totalHoursReq);
-		$("#totalHours").text(res.timecardApproval.totalHours);
-		$("#totalChargeHours").text(res.timecardApproval.totalHours);
-		$("#totalExclHours").text(res.timecardApproval.totalExclHours);
+		$("#totalHoursReq").val(res.timecardApproval.totalHoursReq);
+		$("#totalHours").val(res.timecardApproval.totalHours);
+		$("#totalChargeHours").val(res.timecardApproval.totalHours);
+		$("#totalExclHours").val(res.timecardApproval.totalExclHours);
 	});
 	
 	$.mobile.hidePageLoadingMsg();
