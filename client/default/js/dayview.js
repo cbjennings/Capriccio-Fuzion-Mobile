@@ -199,8 +199,7 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 	});
 
 	$("#btnViewTimecardApproval").click(function() {
-		$.mobile.changePage($("#TimecardApprovalDetail"), {
-			transition : "pop"
+		loadTimecardApproval();
 		});
 	});
 

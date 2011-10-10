@@ -36,7 +36,7 @@ $("#TimecardDetail").live(
 		function() {
 			$("btnSubmitTimecardApproval").click(function() {
 				$.mobile.changePage($("#TimecardApprovalDialog"), {
-					transition : "pop"
+					transition : "pop" }
 				});
 			});
 
