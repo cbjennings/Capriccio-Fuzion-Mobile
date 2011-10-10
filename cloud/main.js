@@ -249,5 +249,4 @@ function getCurrentTimecardApproval(req) {
 	};
 	//$fh.log('getTimecard ret',ret);
 	return ret;
-
 }
