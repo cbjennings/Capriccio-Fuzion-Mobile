@@ -33,9 +33,9 @@ function loadCurrentTimecardApproval()
 $("#TimecardApprovalDetail").live(
 		'pagecreate',
 		function() {
-			alert('approval detail create firing');
-			$("btnSubmitTimecardApproval").click(function() {
-				alert('submit approval clicked');
+			//alert('approval detail create firing');
+			$("#btnSubmitTimecardApproval").click(function() {
+				//alert('submit approval clicked');
 				$.mobile.changePage($("#TimecardApprovalDialog"), {
 					transition : "pop"
 				});
