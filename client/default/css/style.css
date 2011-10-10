@@ -3,7 +3,7 @@ body {
   font-size:14px;
 }
 
-#DayViewCalendar {
+.ui-page {
 	min-height:100% !important;
 }
 
