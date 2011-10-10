@@ -54,9 +54,9 @@
 		<a href="#" id="btnNewTimecard" data-role="button"
 			data-icon="plus" data-iconpos="left" data-inline="true"
 			style="z-index: 1000; position: absolute; right: 0; bottom: 0;">New</a>
-		<a href="#" id="btnSubmitTimecardApproval" data-role="button"
-			data-icon="check" data-iconpos="left" data-inline="true"
-			style="z-index: 1000; position: absolute; left: 0; bottom: 0;">Submit Timecard</a>
+		<a href="#" id="btnViewTimecardApproval" data-role="button"
+			data-icon="gear" data-iconpos="left" data-inline="true"
+			style="z-index: 1000; position: absolute; left: 0; bottom: 0;">Timecard Approval</a>
 	</div>
 </div>
 
@@ -127,6 +127,21 @@
 			<a href="#" id="btnConfirmYes" data-role="button" data-inline="true" data-theme="e">Yes</a>
 			<a href="#" id="btnConfirmNo" data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a>
 		</div>
+</div>
+
+<div data-role="page" id="pg_TimecardApproval">
+	<div data-role="header">
+		<h1>Timecard Approval</h1>
+	</div>
+	
+	<div data-role="content">
+		<table>
+			<tr>
+				<td>Total Hours Required:</td>
+				<td><input type="text" name="txtId" id="txtId" value="88" /></td>
+			</tr>
+		</table>
+	</div>
 </div>
 
 <script src="js/init.js" type="text/javascript"></script>

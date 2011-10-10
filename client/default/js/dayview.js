@@ -198,10 +198,10 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 		loadTimecard(new Date($("#fkDate").val()));
 	});
 	
-	$("#btnSubmitTimecardApproval").click(
+	$("#btnViewTimecardApproval").click(
 			function()
 			{
-				$.mobile.changePage($("#submitTimecardApprovalDialog"));
+				$.mobile.changePage($("#pg_TimecardApproval"));
 			});
 	
 	$("#btnConfirmYes").click(
