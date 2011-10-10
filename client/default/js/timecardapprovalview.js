@@ -34,6 +34,7 @@ $("#TimecardApprovalDetail").live(
 		'pagecreate',
 		function() {
 			$("btnSubmitTimecardApproval").click(function() {
+				alert('submit approval clicked');
 				$.mobile.changePage($("#TimecardApprovalDialog"), {
 					transition : "pop"
 				});
@@ -41,6 +42,7 @@ $("#TimecardApprovalDetail").live(
 
 			$("#btnConfirmYes").click(
 					function() {
+						
 						$.mobile.showPageLoadingMsg();
 						var guid = "somemagicguid";
 						var req = {
