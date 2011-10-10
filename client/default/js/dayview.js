@@ -204,12 +204,6 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 				$.mobile.changePage($("#submitTimecardApprovalDialog"));
 			});
 	
-	$("#btnConfirmNo").click(
-			function()
-			{
-				$.mobile.changePage($("#DayViewCalendar"));
-			});
-	
 	$("#btnConfirmYes").click(
 			function()
 			{
