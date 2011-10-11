@@ -128,7 +128,7 @@ function loadTimecard(id) {
 				loadMileage($("#txtId").val());
 			});
 			
-			
+			$("#btnDeleteTimecard").show();
 			$.mobile.hidePageLoadingMsg();
 		});
 	} else {
@@ -166,6 +166,7 @@ function loadTimecard(id) {
 			$("#txtEndOn").val("");
 			$("#txtComments").text("");
 			$("#TimecardDetailHeader").text("New Timecard");
+			$("#btnDeleteTimecard").hide();
 			$.mobile.hidePageLoadingMsg();
 		});
 	}
