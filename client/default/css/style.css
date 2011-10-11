@@ -34,6 +34,7 @@ body {
 }
 
 .tab.selected {
+	padding-top: 7px;
 	background-color:rgba(0,0,0,0);
 	font-weight:bold;
 	color:#fff;
