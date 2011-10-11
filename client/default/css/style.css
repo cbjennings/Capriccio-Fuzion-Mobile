@@ -29,6 +29,8 @@ body {
 	padding-top:10px;
 	background-color:rgba(0,0,0,.1);
 	color: #ccc;
+	height:20px;
+	text-align:center;
 }
 
 .tab.selected {
