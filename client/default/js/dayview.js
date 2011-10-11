@@ -44,7 +44,7 @@ function goDay(date) {
 						}, function(code, errorprops, params) { /* none */
 						});
 
-						var listheight = winheight - 90;
+						var listheight = winheight - 120;
 						var hourHeight = listheight / 24;
 						var d = new Date(res.date);
 						d.setDate(d.getDate() + 1);
