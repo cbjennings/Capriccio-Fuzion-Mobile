@@ -67,7 +67,7 @@
 	<div data-role="header" data-theme="b">
 		<h1 id="TimecardDetailHeader"></h1>
 		<a href="#" id="btnCloseTimecard" data-role="button" data-icon="delete" 
-			data-iconpos="notext" data-inline="true">Close</a>
+			data-iconpos="notext" data-inline="true" style="float:right;">Close</a>
 	</div>
 
 	<div data-role="content" style="padding: 0; margin: 0;">
@@ -101,7 +101,9 @@
 					style="float: right;">&nbsp;</span></li>
 			</ul>
 		</form>
-		
+		<a href="#" id="btnDeleteTimecard" data-role="button" data-icon="delete"
+			data-iconpos="left" data-inline="true"
+			style="z-index:1000; position:absolute; left:0; bottom:0;">
 		<a href="#" id="btnSaveTimecard" data-role="button" data-icon="check"
 			data-iconpos="left" data-inline="true"
 			style="z-index: 1000; position: absolute; right: 0; bottom: 0;">Save</a>
@@ -134,7 +136,7 @@
 	<div data-role="header" data-theme="b">
 		<h1>Timecard Approval</h1>
 		<a href="#" data-role="button" data-icon="delete" data-iconpos="notext"
-				data-inline="true" data-rel="back">Close</a>
+				data-inline="true" data-rel="back" style="float:right;">Close</a>
 	</div>
 
 	<div data-role="content">
@@ -157,6 +159,7 @@
 					<input type="text" name="totalExclHours" id="totalExclHours" value="" />
 				</li>
 			</ul>
+			
 			<a href="#" id="btnSubmitTimecardApproval" data-role="button"
 				data-icon="check" data-iconpos="left" data-inline="true"
 				style="z-index: 1000; position: absolute; right: 0; bottom: 0;">Submit</a>
