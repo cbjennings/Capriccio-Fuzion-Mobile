@@ -25,14 +25,16 @@ body {
 }
 
 .tab {
-	border-right:1px solid #456F9A;
+	
 	padding-top:10px;
 	background-color:rgba(0,0,0,.1);
+	color: #ccc;
 }
 
 .tab.selected {
 	background-color:rgba(0,0,0,0);
 	font-weight:bold;
+	color:#fff;
 }
 
 form {
