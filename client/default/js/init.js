@@ -24,19 +24,21 @@ $fh.ready(function() {
       $("#txtCompany").val()
     ) {
       $.mobile.showPageLoadingMsg();
-      $fh.act(
-        {
-          act:'tryLogin',
-          secure:true, 
-          req:{
-            'username':$("#txtUsername").val(),
-            'password':$("#txtPassword").val(),
-            'company':$("#txtCompany").val()
-          }
-        },
-        function(res) {
-          if(res.success) {
-            $fh.data({act:'save', key:'username', val:$("#txtUsername").val()});
+      
+      var d={
+              'username':$("#txtUsername").val(),
+              'password':$("#txtPassword").val(),
+              'company':$("#txtCompany").val()
+            };
+      CallService(
+    	'tryLogin',
+		{
+			'username':$("#txtUsername").val(),
+			'password':$("#txtPassword").val(),
+			'company':$("#txtCompany").val()
+		},
+		function(res) {
+      	  $fh.data({act:'save', key:'username', val:$("#txtUsername").val()});
             $fh.data({act:'save', key:'company', val:$("#txtCompany").val()});
             if($("#chkStorePassword").attr("checked")) {
               $fh.data({act:'save', key:'password', val:$("#txtPassword").val()}); 
@@ -44,17 +46,12 @@ $fh.ready(function() {
               $fh.data({act:'save', key:'password', val:''});
             }
             $.mobile.hidePageLoadingMsg();
-            $.mobile.changePage($("#DayViewCalendar"));
-          }
+            $.mobile.changePage($("#DayViewCalendar"));  
         },
-        function(res) {
-          alert('f:'+res); 
-        }
-      );
-    } else {
-      alert('missing field'); 
-    } 
-  });
+        "DisplayMessages"
+	  );
+      
+    });
   if(user&&pass&&company) $("#btnLogin").click(); 
   $( '#DayViewCalendar' ).live( 'pageinit',function(event){ });
 });
