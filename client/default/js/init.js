@@ -22,14 +22,9 @@ $fh.ready(function() {
       $("#txtUsername").val() && 
       $("#txtPassword").val() && 
       $("#txtCompany").val()
-    ) {
+	) {
       $.mobile.showPageLoadingMsg();
       
-      var d={
-              'username':$("#txtUsername").val(),
-              'password':$("#txtPassword").val(),
-              'company':$("#txtCompany").val()
-            };
       CallService(
     	'tryLogin',
 		{
@@ -50,8 +45,8 @@ $fh.ready(function() {
         },
         "DisplayMessages"
 	  );
-      
-    });
+    }
+  });
   if(user&&pass&&company) $("#btnLogin").click(); 
   $( '#DayViewCalendar' ).live( 'pageinit',function(event){ });
 });
