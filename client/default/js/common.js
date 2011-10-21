@@ -28,6 +28,9 @@ function CallService(ServiceName, Data, Success, Error) {
 			} else {
 				Success(data);
 			}
+		},
+		error:function(jqXHR, textStatus, errorThrown) {
+			alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
 		}
 	});
 }
