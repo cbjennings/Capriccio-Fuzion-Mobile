@@ -26,7 +26,7 @@ $fh.ready(function() {
       $.mobile.showPageLoadingMsg();
       
       CallService(
-    	'tryLogin',
+    	'Login',
 		{
 			'username':$("#txtUsername").val(),
 			'password':$("#txtPassword").val(),
