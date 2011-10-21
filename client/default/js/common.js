@@ -7,7 +7,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		data:JSON.stringify(Data),
 		dataType:"jsonp",
 		crossDomain:"true",
-		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName
+		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName,
 		success:function(d) {
 			var data=JSON.parse(d.d);
 			if(data.success===false && Error==="DisplayMessages") {
