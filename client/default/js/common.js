@@ -6,8 +6,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		type:"POST",
 		contentType: "application/json; charset=utf-8",
 		data:JSON.stringify(Data),
-		dataType:"jsonp",
-		crossDomain:"true",
+		dataType:"json",
 		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName,
 		success:function(d) {
 			var data=JSON.parse(d.d);
