@@ -29,8 +29,7 @@ $fh.ready(function() {
     	'Login',
 		{
 			'username':$("#txtUsername").val(),
-			'password':$("#txtPassword").val(),
-			'company':$("#txtCompany").val()
+			'password':$("#txtPassword").val()
 		},
 		function(res) {
       	  $fh.data({act:'save', key:'username', val:$("#txtUsername").val()});
