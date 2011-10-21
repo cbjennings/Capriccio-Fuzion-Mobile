@@ -4,11 +4,11 @@ function CallService(ServiceName, Data, Success, Error) {
 	$.ajax({
 		type:"POST",
 		contentType: "application/json; charset=utf-8",
-		data=JSON.stringify(Data),
-		dataType="jsonp",
-		crossDomain="true",
-		url="https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName
-		success=function(d) {
+		data:JSON.stringify(Data),
+		dataType:"jsonp",
+		crossDomain:"true",
+		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName
+		success:function(d) {
 			var data=JSON.parse(d.d);
 			if(data.success===false && Error==="DisplayMessages") {
 				//Common error/validation message popup
