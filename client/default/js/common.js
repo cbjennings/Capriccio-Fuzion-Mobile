@@ -6,6 +6,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		contentType: "application/json; charset=utf-8",
 		data:Data,
 		dataType:"jsonp",
+		jsonpCallback:"testCallback",
 		crossDomain:"true",
 		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName,
 		success:function(d) {
