@@ -1,12 +1,12 @@
 var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
+	alert(JSON.stringify(Data));
 	$.ajax({
 		type:"POST",
 		contentType: "application/json; charset=utf-8",
-		data:Data,
+		data:JSON.stringify(Data),
 		dataType:"jsonp",
-		jsonpCallback:"testCallback",
 		crossDomain:"true",
 		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName,
 		success:function(d) {
