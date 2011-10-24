@@ -123,5 +123,7 @@
 	font-weight:100 !important;
 	font-family: Tahoma;
 	font-size:9px;
-	background-image: url('images/ajax-loader.png') no-repeat 50% 50%;
+	background-image: url('images/ajax-loader.png');
+	background-repeat: no-repeat;
+	background-position: center top;
 }
