@@ -297,7 +297,11 @@
        only screen and (min--moz-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 240dpi) {
 	
-	.ui-icon-new,.ui-icon-timecard,.ui-icon-login,.ui-icon-approval,.ui-icon-delete,.ui-icon-expense,.ui-icon-submit-approval,.ui-icon-save {
+	.ui-icon.ui-icon-new,.ui-icon.ui-icon-timecard,
+	.ui-icon.ui-icon-login,.ui-icon.ui-icon-approval,
+	.ui-icon.ui-icon-delete,.ui-icon.ui-icon-expense,
+	.ui-icon.ui-icon-submit-approval,.ui-icon.ui-icon-save {
+		background:rgba(0,0,0,0);
 		background-image: url(images/FuzionSprites_36.png);
 		-moz-background-size: 325px 18px;
 		-o-background-size: 325px 18px;
