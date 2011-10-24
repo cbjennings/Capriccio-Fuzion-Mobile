@@ -1,7 +1,7 @@
 var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
-	alert(JSON.stringify(Data));
+	//alert(JSON.stringify(Data));
 	$.ajax({
 		type:"POST",
 		contentType: "application/json; charset=utf-8",
@@ -30,7 +30,7 @@ function CallService(ServiceName, Data, Success, Error) {
 			}
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
-			alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
+			//alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
 		}
 	});
 }

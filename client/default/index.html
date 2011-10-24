@@ -31,7 +31,7 @@
 			</ul>
 			<div class="spacer"></div>
 			<a href="#" id="btnLogin" data-role="button" data-icon="login"
-				data-iconpos="right" data-inline="true" style="float: right;">Log
+				data-iconpos="left" data-inline="true" style="float: right;">Log
 				In</a>
 		</form>
 	</div>
@@ -40,8 +40,8 @@
 <div data-role="page" data-theme="b" id="DayViewCalendar" style="min-height:100%">
 	<div data-role="header" data-theme="b">		
 		<div class="ui-grid-a">
-			<div class="ui-block-a tab selected">Timecards</div>
-			<div class="ui-block-b tab">Expenses</div>
+			<div class="ui-block-b tab selected" data-iconpos="left" data-icon="timecard">Timecards</div>
+			<div class="ui-block-b tab" data-iconpos="left" data-icon="expense">Expenses</div>
 		</div>	
 	</div>
 	<div data-role="header" data-theme="b">
@@ -60,10 +60,10 @@
 	<div data-role="content" style="padding: 0; margin: 0;">
 		<div id="entryList-contain" style="margin: 0; padding: 0;"></div>
 		<br /> <a href="#" id="btnNewTimecard" data-role="button"
-			data-icon="plus" data-iconpos="left" data-inline="true"
+			data-icon="new" data-iconpos="left" data-inline="true"
 			style="z-index: 1000; position: absolute; right: 0; bottom: 0;">New</a>
 		<a href="#" id="btnViewTimecardApproval" data-role="button"
-			data-icon="gear" data-iconpos="left" data-inline="true"
+			data-icon="approval" data-iconpos="left" data-inline="true"
 			style="z-index: 1000; position: absolute; left: 0; bottom: 0;">Timecard
 			Approval</a>
 	</div>
@@ -75,7 +75,7 @@
 <div data-role="page" data-theme="b" id="TimecardDetail">
 	<div data-role="header" data-theme="b">
 		<h1 id="TimecardDetailHeader"></h1>
-		<a href="#" id="btnCloseTimecard" data-role="button" data-icon="delete" 
+		<a href="#" id="btnCloseTimecard" data-role="button" data-icon="close" 
 			data-iconpos="notext" data-inline="true" style="float:right;">Close</a>
 	</div>
 
@@ -104,7 +104,7 @@
 				</select></li>
 				<li data-role="fieldcontain"><label for="txtComments">Comments:</label>
 					<textarea name="txtComments" id="txtComments"></textarea></li>
-				<li id="mileageList" class="button-up-c" style="display: none;">
+				<li id="mileageList" class="button-up-b" style="display: none;">
 					Mileage Reports <span
 					class="ui-icon ui-icon-arrow-r ui-icon-shadow"
 					style="float: right;">&nbsp;</span></li>
@@ -113,7 +113,7 @@
 		<a href="#" id="btnDeleteTimecard" data-role="button" data-icon="delete"
 			data-iconpos="left" data-inline="true"
 			style="z-index:1000; position:absolute; left:0; bottom:0;">Delete</a>
-		<a href="#" id="btnSaveTimecard" data-role="button" data-icon="check"
+		<a href="#" id="btnSaveTimecard" data-role="button" data-icon="save"
 			data-iconpos="left" data-inline="true"
 			style="z-index: 1000; position: absolute; right: 0; bottom: 0;">Save</a>
 	</div>
