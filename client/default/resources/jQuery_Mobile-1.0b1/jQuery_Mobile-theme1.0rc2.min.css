@@ -24,6 +24,10 @@ background: linear-gradient(45deg, #abcaf6 0%,#8aafe6 17%,#9ec0f0 20%,#9cbdee 24
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abcaf6', endColorstr='#bfdbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
+
+.ui-header.ui-bar-b:after {
+	cntent:url("../../Logo.png");
+}
 .ui-header h1.ui-title {
 	text-align:left !important;
 }
