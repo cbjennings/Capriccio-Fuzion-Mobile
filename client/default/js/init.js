@@ -1,7 +1,7 @@
 //Ready Function
 $fh.ready(function() {
 	
-	$(".ui-loader h1").html("Loading...");
+	
   $.mobile.selectmenu.prototype.options.nativeMenu = false;
    var user, pass, company;
   $fh.data({key:'username'}, function(res) {
