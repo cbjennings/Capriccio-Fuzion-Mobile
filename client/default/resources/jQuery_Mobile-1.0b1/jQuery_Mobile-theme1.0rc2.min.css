@@ -115,3 +115,10 @@
 	font-family: Helvetica, Arial, sans-serif;
 	text-decoration: none;
 }
+
+.ui-loader {
+	background-color: #fff;
+	border: 1px solid #A3C0E8;
+	color:#2C4D79;
+}
+}
