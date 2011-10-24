@@ -12,6 +12,18 @@
 	color: #000000;
 	font-weight:bold;
 }
+
+.ui-header.ui-bar-b {
+	background: #a9c8f4; /* Old browsers */
+	background: -moz-linear-gradient(30deg, #a9c8f4 0%, #8db2e7 26%, #95b9eb 27%, #9abeee 32%, #a1c2f0 56%, #a2c3f0 57%, #b2cff9 59%, #b3d0fa 60%, #bfdbff 80%, #bfdbff 81%, #bfdbff 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#a9c8f4), color-stop(26%,#8db2e7), color-stop(27%,#95b9eb), color-stop(32%,#9abeee), color-stop(56%,#a1c2f0), color-stop(57%,#a2c3f0), color-stop(59%,#b2cff9), color-stop(60%,#b3d0fa), color-stop(80%,#bfdbff), color-stop(81%,#bfdbff), color-stop(100%,#bfdbff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(30deg, #a9c8f4 0%,#8db2e7 26%,#95b9eb 27%,#9abeee 32%,#a1c2f0 56%,#a2c3f0 57%,#b2cff9 59%,#b3d0fa 60%,#bfdbff 80%,#bfdbff 81%,#bfdbff 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(30deg, #a9c8f4 0%,#8db2e7 26%,#95b9eb 27%,#9abeee 32%,#a1c2f0 56%,#a2c3f0 57%,#b2cff9 59%,#b3d0fa 60%,#bfdbff 80%,#bfdbff 81%,#bfdbff 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(30deg, #a9c8f4 0%,#8db2e7 26%,#95b9eb 27%,#9abeee 32%,#a1c2f0 56%,#a2c3f0 57%,#b2cff9 59%,#b3d0fa 60%,#bfdbff 80%,#bfdbff 81%,#bfdbff 100%); /* IE10+ */
+	background: linear-gradient(30deg, #a9c8f4 0%,#8db2e7 26%,#95b9eb 27%,#9abeee 32%,#a1c2f0 56%,#a2c3f0 57%,#b2cff9 59%,#b3d0fa 60%,#bfdbff 80%,#bfdbff 81%,#bfdbff 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c8f4', endColorstr='#bfdbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+}
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
 {
 	font-family: Helvetica, Arial, sans-serif;
