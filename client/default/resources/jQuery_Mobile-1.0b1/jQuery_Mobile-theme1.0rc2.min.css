@@ -26,7 +26,7 @@
 .ui-header.ui-bar-b h1 {
 	float:left;
 }
-.ui-header.ui-bar-b h1:before {
+.ui-header.ui-bar-b h1:after {
 	content:url("../../Logo.png");
 }
 .ui-header h1.ui-title {
