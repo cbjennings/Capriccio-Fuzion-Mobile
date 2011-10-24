@@ -216,7 +216,7 @@
 	box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
 }
 .ui-shadow-inset.ui-focus {
-	-moz-box-shadow: inset 0 0 0 3px #888;
-	-webkit-box-shadow: inset 0 0 0 3px #888;
-	box-shadow: inset 0 0 0 3px #888;
+	-moz-box-shadow: inset 0 0 0 3px #ffdbaf;
+	-webkit-box-shadow: inset 0 0 0 3px #ffdbaf;
+	box-shadow: inset 0 0 0 3px #ffdbaf;
 }
