@@ -29,6 +29,7 @@
 }
 .ui-header h1.ui-title {
 	text-align:left !important;
+	margin-top:20px;
 }
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
 {
@@ -206,4 +207,11 @@
 	background-image: url(images/FuzionSprites_18.png);
 	background-repeat:no-repeat;
 	background-position: -288px 50%;
+}
+
+/*  Inputs */
+.ui-focus {
+	-moz-box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+	-webkit-box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
+	box-shadow: inset 0 1px 4px rgba(0,0,0,.2);
 }
