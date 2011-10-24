@@ -22,7 +22,10 @@ background: -o-linear-gradient(45deg, #abcaf6 0%,#8aafe6 17%,#9ec0f0 20%,#9cbdee
 background: -ms-linear-gradient(45deg, #abcaf6 0%,#8aafe6 17%,#9ec0f0 20%,#9cbdee 24%,#adcdf5 27%,#9cbdee 42%,#a0bff1 45%,#afcff8 50%,#b3d0fa 53%,#bfdbff 75%,#bfdbff 78%); /* IE10+ */
 background: linear-gradient(45deg, #abcaf6 0%,#8aafe6 17%,#9ec0f0 20%,#9cbdee 24%,#adcdf5 27%,#9cbdee 42%,#a0bff1 45%,#afcff8 50%,#b3d0fa 53%,#bfdbff 75%,#bfdbff 78%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abcaf6', endColorstr='#bfdbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-text-align:left !important;
+
+}
+.ui-header h1.ui-title {
+	text-align:left !important;
 }
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
 {
