@@ -22,6 +22,7 @@
 	background: -ms-linear-gradient(45deg, #a9c8f4 0%,#8db2e7 13%,#95b9eb 14%,#9abeee 26%,#a1c2f0 36%,#a2c3f0 37%,#b2cff9 48%,#b3d0fa 49%,#bfdbff 71%,#bfdbff 72%,#bfdbff 100%); /* IE10+ */
 	background: linear-gradient(45deg, #a9c8f4 0%,#8db2e7 13%,#95b9eb 14%,#9abeee 26%,#a1c2f0 36%,#a2c3f0 37%,#b2cff9 48%,#b3d0fa 49%,#bfdbff 71%,#bfdbff 72%,#bfdbff 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9c8f4', endColorstr='#bfdbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	text-align:left;
 }
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
 {
