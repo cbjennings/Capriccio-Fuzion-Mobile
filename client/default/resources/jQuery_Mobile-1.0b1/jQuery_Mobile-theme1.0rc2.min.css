@@ -211,7 +211,7 @@
 
 /*  Inputs */
 .ui-focus {
-	-moz-box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 5px 5px rbga(255,219,175,.3);
-	-webkit-box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 5px 5px rbga(255,219,175,.3);
-	box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 5px 5px rbga(255,219,175,.3);
+	-moz-box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 5px 5px #ffdbaf;
+	-webkit-box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 5px 5px #ffdbaf;
+	box-shadow: inset 0 1px 4px rgba(0,0,0,.2), 5px 5px #ffdbaf;
 }
