@@ -123,6 +123,8 @@
 	font-weight:100 !important;
 	font-family: Tahoma;
 	font-size:9px;
+}
+.ui-icon-loading.spin {
 	background-image: url('images/ajax-loader.gif');
 	background-repeat: no-repeat;
 	background-position: center top;
