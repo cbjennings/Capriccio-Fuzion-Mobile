@@ -154,7 +154,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abcaf6', end
        only screen and (min--moz-device-pixel-ratio: 1.5),
        only screen and (min-resolution: 240dpi) {
 	
-	.ui-icon {
+	.ui-icon-new,.ui-icon-timecard,.ui-icon-login,.ui-icon-approval,.ui-icon-delete,.ui-icon-expense,.ui-icon-submit-approval,.ui-icon-save {
 		background-image: url(images/FuzionSprites_36.png);
 		-moz-background-size: 325px 18px;
 		-o-background-size: 325px 18px;
@@ -163,31 +163,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abcaf6', end
 	}
 
 }
-.ui-icon {
+
+.ui-icon-new {
 	background-image: url(images/FuzionSprites_18.png);
 	background-repeat:no-repeat;
-}
-.ui-icon-new {
 	background-position: -0 50%;
 }
 .ui-icon-timecard {
+	background-image: url(images/FuzionSprites_18.png);
+	background-repeat:no-repeat;
 	background-position: -36px 50%;
 }
 .ui-icon-login {
+	background-image: url(images/FuzionSprites_18.png);
+	background-repeat:no-repeat;
 	background-position: -72px 50%;
 }
 .ui-icon-approval {
+	background-image: url(images/FuzionSprites_18.png);
+	background-repeat:no-repeat;
 	background-position: -108px 50%;
 }
 .ui-icon-delete {
+	background-image: url(images/FuzionSprites_18.png);
+	background-repeat:no-repeat;
 	background-position: -144px 50%;
 }
 .ui-icon-expense {
+	background-image: url(images/FuzionSprites_18.png);
+	background-repeat:no-repeat;
 	background-position: -216px 50%;
 }
 .ui-icon-submit-approval {
+	background-image: url(images/FuzionSprites_18.png);
+	background-repeat:no-repeat;
 	background-position: -252px 50%;
 }
 .ui-icon-save {
+	background-image: url(images/FuzionSprites_18.png);
+	background-repeat:no-repeat;
 	background-position: -288px 50%;
 }
