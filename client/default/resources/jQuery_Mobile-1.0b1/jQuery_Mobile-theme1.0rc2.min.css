@@ -23,11 +23,9 @@
 	background: linear-gradient(45deg, #abcaf6 0%,#8aafe6 17%,#9ec0f0 20%,#9cbdee 24%,#adcdf5 27%,#9cbdee 42%,#a0bff1 45%,#afcff8 50%,#b3d0fa 53%,#bfdbff 75%,#bfdbff 78%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abcaf6', endColorstr='#bfdbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
-.ui-header.ui-bar-b h1 {
-	float:left;
-}
-.ui-header.ui-bar-b h1:after {
-	content:url("../../Logo.png");
+
+.ui-header.ui-bar-b img {
+	float:right;
 }
 .ui-header h1.ui-title {
 	text-align:left !important;
