@@ -31,7 +31,19 @@ function CallService(ServiceName, Data, Success, Error) {
 			return false;
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
-			alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
+			$("#errorList").html("");
+
+		
+			$("<li><b>Unable to connect to Server</b></li>")
+					.appendTo($("#errorList"));
+			$("<li>Please verify data service, double check your Company Id, and try again.</li>")
+				.appendTo($("#errorList"));
+			
+		
+			$.mobile.changePage($("#Validation"), {
+				transition : "pop"
+			});	
+			
 		}
 	});
 }
