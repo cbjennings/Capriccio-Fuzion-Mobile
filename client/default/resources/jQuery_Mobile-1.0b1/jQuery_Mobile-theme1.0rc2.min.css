@@ -1,3 +1,7 @@
+body {
+	font-family: Tahoma, Arial, Helvetica, sans-serif;
+}
+
 .ui-bar-b
 {
 	background: #e0edff; /* Old browsers */
@@ -27,6 +31,11 @@
 .ui-body.ui-field-contain {
 	border:0;
 	padding:.1em 15px .1em 15px;
+}
+
+.ui-field-contain label {
+	vertical-align:middle;
+	font-size:9pt;
 }
 
 .ui-header.ui-bar-b img {
