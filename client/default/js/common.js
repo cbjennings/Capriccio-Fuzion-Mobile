@@ -5,7 +5,7 @@ function CallService(ServiceName, Data, Success, Error) {
 
 	
 	$.ajax({
-		
+		method:"POST",
 		data:Data,
 		dataType:"jsonp",
 		//url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName+"?jsoncallback=?",
