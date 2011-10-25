@@ -2,12 +2,15 @@ var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
 	alert(JSON.stringify(Data));
+
+	
 	$.ajax({
 		type:"POST",
 		contentType: "application/json; charset=utf-8",
 		data:JSON.stringify(Data),
-		dataType:"json",
-		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName+"?jsoncallback=?",
+		dataType:"jsonp",
+		//url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName+"?jsoncallback=?",
+		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
 		//jsonpCallback:"fnSuccess",
 		success:function(d) {
 			var data=JSON.parse(d.d);
