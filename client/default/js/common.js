@@ -13,6 +13,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
 		//jsonpCallback:"fnSuccess",
 		success:function(d) {
+			alert(d);
 			var data=JSON.parse(d.d);
 			if(data.success===false && Error==="DisplayMessages") {
 				//Common error/validation message popup
