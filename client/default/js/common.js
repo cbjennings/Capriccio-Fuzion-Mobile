@@ -2,12 +2,12 @@ var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
 	//alert(JSON.stringify(Data));
-	alert("url: 'https://capricciofuzion.com/"+$("#txtCompany").val()+"/web/WebServices/MobileService.asmx/"+ServiceName+"'")
+	
 	$.ajax({
 		type:"POST",
 		contentType: "application/json; charset=utf-8",
 		data:JSON.stringify(Data),
-		dataType:"jsonp",
+		dataType:"json",
 		url:"https://capricciofuzion.com/"+$("#txtCompany").val()+"/web/WebServices/MobileService.asmx/"+ServiceName,
 		success:function(d) {
 			var data=JSON.parse(d.d);
@@ -31,7 +31,7 @@ function CallService(ServiceName, Data, Success, Error) {
 			}
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
-			//alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
+			alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
 		}
 	});
 }
