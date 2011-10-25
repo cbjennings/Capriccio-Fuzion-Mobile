@@ -5,6 +5,11 @@ body {
 input {
 	font-family: Tahoma,Arial,Helvetica,sans-serif;
 }
+
+.ui-header .ui-title {
+	vertical-align:middle;
+	margin: 0,0,0,.2em;
+}
 .ui-bar-b
 {
 	background: #e0edff; /* Old browsers */
