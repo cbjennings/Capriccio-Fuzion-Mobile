@@ -388,7 +388,11 @@ input {
 }
 
 
-
+.ui-checkbox .ui-btn {
+	border:0;
+	background:none;
+	
+}
 .ui-content {
 	border:0;
 	
