@@ -2,6 +2,7 @@ var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
 	//alert(JSON.stringify(Data));
+	alert("url: 'https://capricciofuzion.com/"+$("#txtCompany").val()+"/web/WebServices/MobileService.asmx/"+ServiceName+"'")
 	$.ajax({
 		type:"POST",
 		contentType: "application/json; charset=utf-8",
