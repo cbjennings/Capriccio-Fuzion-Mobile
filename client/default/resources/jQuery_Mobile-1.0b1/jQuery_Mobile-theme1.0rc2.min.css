@@ -391,6 +391,11 @@ input {
 
 .ui-content {
 	border:0;
+	
+}
+
+#Login .ui-content {
+	padding-top:15px;
 }
 
 .spacer {
