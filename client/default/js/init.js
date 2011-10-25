@@ -30,8 +30,8 @@ $fh.ready(function() {
       CallService(
     	'Login',
 		{
-			username:$("#txtUsername").val(),
-			password:$("#txtPassword").val()
+			username:JSON.stringify($("#txtUsername").val()),
+			password:JSON.stringify($("#txtPassword").val())
 		},
 		function(res) {
       	  $fh.data({act:'save', key:'username', val:$("#txtUsername").val()});
