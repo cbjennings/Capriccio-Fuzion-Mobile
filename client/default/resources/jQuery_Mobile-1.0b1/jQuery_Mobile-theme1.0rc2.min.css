@@ -7,8 +7,8 @@ input {
 }
 
 .ui-header .ui-title {
-	vertical-align:middle;
-	margin: 0 0 0 .2em !important;
+	text-align:left !important;
+	margin: 20px 0 0 .2em !important;
 }
 .ui-bar-b
 {
@@ -49,10 +49,7 @@ input {
 .ui-header.ui-bar-b img {
 	float:right;
 }
-.ui-header h1.ui-title {
-	text-align:left !important;
-	margin-top:20px;
-}
+
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
 {
 	
