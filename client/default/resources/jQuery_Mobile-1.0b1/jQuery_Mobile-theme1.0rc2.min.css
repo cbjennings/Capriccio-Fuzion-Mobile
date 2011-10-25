@@ -47,7 +47,7 @@ body {
 }
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
 {
-	font-family: Helvetica, Arial, sans-serif;
+	
 }
 .ui-bar-b .ui-link-inherit
 {
@@ -68,7 +68,7 @@ body {
 }
 .ui-body-b,.ui-body-b input,.ui-body-b select,.ui-body-b textarea,.ui-body-b button
 {
-	font-family: Helvetica, Arial, sans-serif;
+	
 }
 .ui-body-b .ui-link-inherit
 {
@@ -145,7 +145,7 @@ body {
 }
 .ui-btn-up-b,.ui-btn-hover-b,.ui-btn-down-b
 {
-	font-family: Helvetica, Arial, sans-serif;
+	
 	text-decoration: none;
 }
 
@@ -154,7 +154,7 @@ body {
 	border: 1px solid #A3C0E8;
 	color:#2C4D79;
 	font-weight:100 !important;
-	font-family: Tahoma;
+	
 	font-size:9px;
 }
 .ui-icon-loading.spin {
