@@ -26,7 +26,10 @@ $fh.ready(function() {
       $("#txtCompany").val()
 	) {
       $.mobile.showPageLoadingMsg();
-      
+      alert(JSON.stringify({
+			'username':$("#txtUsername").val(),
+			'password':$("#txtPassword").val()
+		}));
       CallService(
     	'Login',
 		{
