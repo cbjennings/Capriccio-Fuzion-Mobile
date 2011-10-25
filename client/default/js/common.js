@@ -9,8 +9,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		data:Data,
 		dataType:"jsonp",
 		success:function(d) {
-			alert(JSON.stringify(d));
-			/*var data=JSON.parse(d.d);
+			var data=JSON.parse(d.d);
 			if(data.success===false && Error==="DisplayMessages") {
 				//Common error/validation message popup
 				$("#errorList").html("");
@@ -29,7 +28,7 @@ function CallService(ServiceName, Data, Success, Error) {
 			} else {
 				Success(data);
 			}
-			return false;*/
+			return false;
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
 			alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
