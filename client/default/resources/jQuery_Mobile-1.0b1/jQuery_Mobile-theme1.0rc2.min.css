@@ -2,6 +2,9 @@ body {
 	font-family: Tahoma, Arial, Helvetica, sans-serif;
 }
 
+input {
+	font-family: Tahoma,Arial,Helvetica,sans-serif;
+}
 .ui-bar-b
 {
 	background: #e0edff; /* Old browsers */
