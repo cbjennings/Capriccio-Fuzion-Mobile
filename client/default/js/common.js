@@ -8,6 +8,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		data:JSON.stringify(Data),
 		dataType:"jsonp",
 		url:"https://www.capricciofuzion.com/"+$("#txtCompany").val()+"/web/webservices/MobileService.asmx/"+ServiceName+"?jsoncallback=?",
+		jsonpCallback:"fnSuccess"
 		success:function(d) {
 			var data=JSON.parse(d.d);
 			if(data.success===false && Error==="DisplayMessages") {
@@ -28,6 +29,7 @@ function CallService(ServiceName, Data, Success, Error) {
 			} else {
 				Success(data);
 			}
+			return false;
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
 			alert(JSON.stringify({'XHR':jqXHR,'status':textStatus,'error':errorThrown}))
