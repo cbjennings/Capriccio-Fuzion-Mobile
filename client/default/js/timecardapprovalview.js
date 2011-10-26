@@ -31,6 +31,12 @@ function loadCurrentTimecardApproval()
 $("#TimecardApprovalDetail").live(
 		'pagecreate',
 		function() {
+			$("#btnCloseTimecardApproval").click(function() {
+				$.mobile.changePage($("#DayViewCalendar"), {
+					reverse : true
+				});
+			});
+			
 			//alert('approval detail create firing');
 			$("#btnSubmitTimecardApproval").click(function() {
 				//alert('submit approval clicked');
