@@ -44,17 +44,16 @@ function goDay(date) {
 						}, function(code, errorprops, params) { /* none */
 						});
 
-						var listheight = winheight - 120;
-						var hourHeight = listheight / 24;
+						var hourHeight=600/24;
 						var d = new Date(res.date);
 						d.setDate(d.getDate() + 1);
 						setDate(d);
 						$("#entryList-contain")
 								.html(
 										'<ul data-role="listview" id="entryList" style="width:85%;float:right;margin-right:1px;margin-top:0;"></ul>')
-								.css("height", listheight + "px").css(
+								.css(
 										"background-size",
-										"auto " + listheight + "px");
+										"auto " + 600 + "px");
 						var float = "right";
 						for ( var i in res.timecards) {
 
