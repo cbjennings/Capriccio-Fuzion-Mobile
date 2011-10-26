@@ -88,12 +88,17 @@
 			<div class="tab selected" data-iconpos="left" data-icon="timecard">Timecards</div>
 			<div class="tab" data-iconpos="left" data-icon="expense">Expenses</div>
 		</div>	
-		<a href="#" id="btnCloseTimecard" data-role="button" data-icon="close" 
-			data-iconpos="notext" data-inline="true" style="float:right;">Close</a>
+		
+		<div id="TimecardDetailHeader" data-icon="timecard" data-iconpos="left" data-role="navbar">
+			<a href="#" id="btnCloseTimecard" data-role="button" data-icon="close" 
+				data-iconpos="notext" data-inline="true" style="float:right;">Close</a>
+			<h1 />
+		</div>
 	</div>
+	
 
 	<div data-role="content" style="padding: 0; margin: 0;">
-		<div id="TimecardDetailHeader" data-icon="timecard" data-iconpos="left"></div>
+		
 		<input type="text" id="TimecardFullDate" style="display: none;" />
 		<form>
 			<ul data-role="listview" data-theme="b" id="TimeCardForm">
