@@ -122,8 +122,8 @@ function goDay(date) {
 											"height",
 											Math.round(hourHeight * TimeSpan)
 													+ "px").css("top",
-											Math.round(margintop) + "px")
-									.css("position", "relative").data("id",
+											Math.round(margintop+135) + "px")
+									.css("position", "absolute").data("id",
 											res.timecards[i].id)
 									.click(function() {
 
