@@ -98,7 +98,7 @@ function loadTimecard(id) {
 			$("#txtStartOn").val(formatTime(starton));
 			$("#txtEndOn").val(formatTime(endon));
 			
-			$("#TimecardDetailHeader").text(TimeSpan + " hours - " + res.timecard.comments)
+			$("#TimecardDetailHeader h1").text(TimeSpan + " hours - " + res.timecard.comments)
 			
 			$("#txtComments").text(res.timecard.comments);
 
@@ -165,7 +165,7 @@ function loadTimecard(id) {
 			$("#txtStartOn").val("");
 			$("#txtEndOn").val("");
 			$("#txtComments").text("");
-			$("#TimecardDetailHeader").text("New Timecard");
+			$("#TimecardDetailHeader h1").text("New Timecard");
 			$("#btnDeleteTimecard").hide();
 			$.mobile.hidePageLoadingMsg();
 		});
