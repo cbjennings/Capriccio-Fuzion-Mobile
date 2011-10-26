@@ -527,7 +527,7 @@ input {
 	overflow-y:visible !important;
 }
 
-#TimeCardDetailHeader span.ui-icon-timecard {
+#TimecardDetailHeader span.ui-icon-timecard {
 	float:left;
 	margin:7px;
 }
