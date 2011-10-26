@@ -418,6 +418,7 @@ input {
 	font-size:11pt;
 	margin-top:25px;
 	display:table;
+	white-space:nowrap;
 }
 
 .ui-tab-container .tab { 
@@ -520,4 +521,10 @@ input {
 /* Timecard Detail */
 #TimeCardForm {
 	height:300px;
+}
+
+
+/*  Drop Downs */
+.ui-selectmenu-list .ui-btn {
+	background: #fff;
 }
