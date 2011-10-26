@@ -459,7 +459,14 @@ input {
 	background:none;
 	width:24px;
 	height:24px;
-	overflow:hidden;
+}
+
+.ui-navbar .ui-btn-icon-top .ui-btn-text {
+	display:none;
+}
+
+.ui-navbar .ui-btn-icon-top .ui-icon {
+	top:0px;
 }
 
 
