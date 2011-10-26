@@ -50,4 +50,5 @@ $fh.ready(function() {
   });
   if(user&&pass&&company) $("#btnLogin").click(); 
   $( '#DayViewCalendar' ).live( 'pageinit',function(event){ });
+  $.mobile.fixedToolbars.setTouchToggleEnabled(false)
 });
