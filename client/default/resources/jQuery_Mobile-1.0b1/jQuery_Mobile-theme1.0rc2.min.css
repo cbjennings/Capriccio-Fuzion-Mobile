@@ -610,3 +610,10 @@ input {
 	font-size: 10px;
 	width:100%;
 }
+
+
+/*  dialogs  */
+.ui-dialog .ui-header, .ui-dialog .ui-content, .ui-dialog .ui-footer {
+	width:100%;
+	max-width:100%;
+}
