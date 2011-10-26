@@ -494,4 +494,12 @@ input {
 	background-position:left top;
 }
 
+#entryList-contain .ui-li {
+	background-color:#fff;
+	border: 1px solid #A3C0E8;
+}
+
+#entryList-contain hr {
+	color:#A3C0E8;
+}
 .
