@@ -459,6 +459,7 @@ input {
 	background:none;
 	width:24px;
 	height:24px;
+	overflow:hidden;
 }
 
 
