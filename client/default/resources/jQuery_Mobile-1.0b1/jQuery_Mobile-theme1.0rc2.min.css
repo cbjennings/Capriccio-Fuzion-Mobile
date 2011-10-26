@@ -482,6 +482,7 @@ input {
 
 .ui-day-select {
 	text-align:center;
+	clear:all;
 }
 
 
