@@ -522,11 +522,7 @@ input {
 
 
 /* Timecard Detail */
-#TimeCardForm {
-	height:auto !important;
-	overflow-x:visible !important;
-	overflow-y:visible !important;
-}
+
 
 #TimecardDetailHeader span.ui-icon-timecard {
 	float:left;
