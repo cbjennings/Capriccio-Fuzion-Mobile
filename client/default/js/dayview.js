@@ -89,16 +89,6 @@ function goDay(date) {
 																			"marginTop",
 																			"0"))
 													.append(
-															$("<span>")
-																	.addClass(
-																			"ui-li-aside")
-																	.text(
-																			TimeSpan
-																					+ " hours")
-																	.css(
-																			"marginTop",
-																			"0"))
-													.append(
 															$("<p />")
 																	.text(
 																			res.timecards[i].comments)
@@ -118,7 +108,17 @@ function goDay(date) {
 																			"padding-top",
 																			"4px"))
 
-									).css(
+									).append(
+											$("<span>")
+											.addClass(
+													"ui-li-aside")
+											.text(
+													TimeSpan
+															+ " hours")
+											.css(
+													"marginTop",
+													"0"))
+									.css(
 											"height",
 											Math.round(hourHeight * TimeSpan)
 													+ "px").css("top",
