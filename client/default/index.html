@@ -180,7 +180,7 @@
 
 	<div data-role="content">
 		<form id="TimecardApprovalForm">
-			<ul data-role="listview">
+			<ul data-role="listview" data-theme="b">
 				<li  data-role="fieldcontain">
 					<label for="totalHoursReq">Total Hours Required:</label>
 					<input type="text" name="totalHoursReq" id="totalHoursReq" value="" />
@@ -198,13 +198,13 @@
 					<input type="text" name="totalExclHours" id="totalExclHours" value="" />
 				</li>
 			</ul>
-			
-			<a href="#" id="btnSubmitTimecardApproval" data-role="button"
-				data-icon="check" data-iconpos="left" data-inline="true"
-				style="z-index: 1000; position: absolute; right: 0; bottom: 0;">Submit</a>
-			
 
 		</form>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<a href="#" id="btnSubmitTimecardApproval" data-role="button" data-icon="check"
+			data-iconpos="left" data-inline="true"
+			style="float:left;">Submit</a>
 	</div>
 </div>
 <script src="js/common.js" type="text/javascript"></script>
