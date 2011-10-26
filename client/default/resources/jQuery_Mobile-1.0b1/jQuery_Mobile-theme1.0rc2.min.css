@@ -625,3 +625,6 @@ input {
 	padding:5px;
 }
 
+.ui-dialog .ui-header span.ui-obj-icon {
+	margin-top:0;
+}
