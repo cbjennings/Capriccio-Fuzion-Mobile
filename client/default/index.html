@@ -40,8 +40,8 @@
 </div>
 
 <!--  Timecard Day View  -->
-<div data-role="page" data-position="fixed" data-theme="b" id="DayViewCalendar" style="min-height:100%">
-	<div data-role="header" data-theme="b">		
+<div data-role="page" data-theme="b" id="DayViewCalendar" style="min-height:100%">
+	<div data-position="fixed" data-role="header" data-theme="b">		
 		<img src="Logo.png" />
 		
 		<div class="ui-tab-container">
@@ -65,12 +65,15 @@
 			data-theme='b' style="display: none;" /> </span>
 		</div>
 		<div id="entryList-contain" style="margin: 0; padding: 0;"></div>
-		<br /> <a href="#" id="btnNewTimecard" data-role="button"
+		<br /> 
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<a href="#" id="btnNewTimecard" data-role="button"
 			data-icon="new" data-iconpos="left" data-inline="true"
-			style="z-index: 1000; position: absolute; right: 0; bottom: 0;">New</a>
+			style="float:right">New</a>
 		<a href="#" id="btnViewTimecardApproval" data-role="button"
 			data-icon="approval" data-iconpos="left" data-inline="true"
-			style="z-index: 1000; position: absolute; left: 0; bottom: 0;">Timecard
+			style="float:left;">Timecard
 			Approval</a>
 	</div>
 </div>
