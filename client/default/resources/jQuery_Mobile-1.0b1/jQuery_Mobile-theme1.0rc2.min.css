@@ -483,4 +483,11 @@ input {
 .ui-day-select {
 	text-align:center;
 }
+
+
+/* DayView */
+#entryList-contain {
+	padding-bottom: 120px;
+}
+
 .

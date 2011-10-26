@@ -1,7 +1,7 @@
 var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
-	alert(JSON.stringify(Data));
+	//alert(JSON.stringify(Data));
 
 	
 	$.ajax({
