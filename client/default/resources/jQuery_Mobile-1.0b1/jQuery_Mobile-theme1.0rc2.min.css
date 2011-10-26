@@ -523,6 +523,7 @@ input {
 
 /* Timecard Detail */
 #TimeCardForm {
+	height:auto !important;
 	overflow-x:visible !important;
 	overflow-y:visible !important;
 }
