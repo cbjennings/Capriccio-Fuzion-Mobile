@@ -34,6 +34,7 @@ input {
 	background: -ms-linear-gradient(45deg, #abcaf6 0%,#8aafe6 17%,#9ec0f0 20%,#9cbdee 24%,#adcdf5 27%,#9cbdee 42%,#a0bff1 45%,#afcff8 50%,#b3d0fa 53%,#bfdbff 75%,#bfdbff 78%); /* IE10+ */
 	background: linear-gradient(45deg, #abcaf6 0%,#8aafe6 17%,#9ec0f0 20%,#9cbdee 24%,#adcdf5 27%,#9cbdee 42%,#a0bff1 45%,#afcff8 50%,#b3d0fa 53%,#bfdbff 75%,#bfdbff 78%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#abcaf6', endColorstr='#bfdbff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	color:#fff;
 }
 
 .ui-header.ui-bar-e {
@@ -46,6 +47,18 @@ input {
 	background: linear-gradient(45deg, rgba(248,80,50,1) 1%,rgba(241,111,92,1) 10%,rgba(246,41,12,1) 11%,rgba(231,56,39,1) 20%,rgba(248,80,50,1) 21%,rgba(241,111,92,1) 30%,rgba(246,41,12,1) 31%,rgba(231,56,39,1) 40%,rgba(248,80,50,1) 41%,rgba(241,111,92,1) 50%,rgba(246,41,12,1) 51%,rgba(231,56,39,1) 60%,rgba(248,80,50,1) 61%,rgba(241,111,92,1) 70%,rgba(246,41,12,1) 71%,rgba(231,56,39,1) 80%,rgba(248,80,50,1) 81%,rgba(241,111,92,1) 90%,rgba(246,41,12,1) 91%,rgba(231,56,39,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
+}
+
+.ui-body-e {
+	background: rgb(125,126,125); /* Old browsers */
+	background: -moz-linear-gradient(top, rgba(125,126,125,1) 0%, rgba(14,14,14,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(125,126,125,1)), color-stop(100%,rgba(14,14,14,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* IE10+ */
+	background: linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+	color:#FFF;
 }
 
 .ui-body.ui-field-contain {

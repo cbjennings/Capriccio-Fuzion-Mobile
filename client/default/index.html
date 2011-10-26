@@ -143,7 +143,10 @@
 
 <div data-role="dialog" id="Validation" data-theme="e">
 	<div data-role="header" data-theme="e">
-		<h1>Error</h1>
+		<h1>
+			Error
+			<span class="ui-obj-icon ui-icon-delete"></span>
+		</h1>
 	</div>
 	<div data-role="content" data-theme="e">
 		<ul id="errorList"></ul>
@@ -170,9 +173,6 @@
 			data-icon="delete" data-iconpos="left" data-inline="true"
 			style="float:right;">No</a>
 	</div>
-	<!-- <a href="#" id="btnConfirmYes" data-role="button" data-inline="true"
-			data-theme="e">Yes</a> <a href="#" id="btnConfirmNo"
-			data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a> -->
 </div>
 
 <div data-role="page" id="TimecardApprovalDetail" data-theme="b">
@@ -203,7 +203,7 @@
 				</li>
 				<li data-role="fieldcontain">
 					<label for="totalChargeHours">Total Chargeable Hours:</label>
-					<td><input type="text" name="totalChargeHours" id="totalChargeHours" value="" />
+					<input type="text" name="totalChargeHours" id="totalChargeHours" value="" />
 				</li>
 				<li data-role="fieldcontain">
 					<label for="totalExclHours">Total Exclusion Hours:</label>
