@@ -573,7 +573,7 @@ input {
 /* Timecard Detail */
 
 
-.ui-navbar span.ui-obj-icon  {
+.ui-navbar span.ui-obj-icon, .ui-dialog .ui-header span.ui-obj-icon  {
 	float:left;
 	margin:7px;
 }
@@ -627,3 +627,4 @@ input {
 .ui-dialog .ui-footer .ui-btn {
 	padding:5px;
 }
+
