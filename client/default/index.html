@@ -97,7 +97,7 @@
 	</div>
 	
 
-	<div data-role="content" style="padding: 0; margin: 0;">
+	<div data-role="content" style="margin: 0;">
 		
 		<input type="text" id="TimecardFullDate" style="display: none;" />
 		<div>
@@ -151,16 +151,25 @@
 </div>
 
 <div data-role="dialog" id="TimecardApprovalDialog" data-theme="b">
-	<div data-role="header" data-theme="b">
+	<div data-role="header" data-theme="b" data-position="fixed">
 		<h1>Submit Timecard Approval</h1>
 	</div>
 
 	<div data-role="content">
-		<h1>Are you sure you want to submit this timecard approval?</h1>
-		<a href="#" id="btnConfirmYes" data-role="button" data-inline="true"
-			data-theme="e">Yes</a> <a href="#" id="btnConfirmNo"
-			data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a>
+		<h3>Are you sure you want to submit this timecard approval?</h3>
 	</div>
+	
+	<div data-role="footer" data-position="fixed" data-theme="b">
+		<a href="#" id="btnConfirmYes" data-role="button" 
+			 data-inline="true"
+			style="float:left;">Yes</a>
+		<a href="#" id="btnConfirmNo" data-role="button" 
+			data-inline="true"
+			style="float:right;">No</a>
+	</div>
+	<!-- <a href="#" id="btnConfirmYes" data-role="button" data-inline="true"
+			data-theme="e">Yes</a> <a href="#" id="btnConfirmNo"
+			data-role="button" data-inline="true" data-rel="back" data-theme="c">No</a> -->
 </div>
 
 <div data-role="page" id="TimecardApprovalDetail" data-theme="b">
@@ -202,7 +211,7 @@
 		</form>
 	</div>
 	<div data-role="footer" data-position="fixed" data-theme="b">
-		<a href="#" id="btnSubmitTimecardApproval" data-role="button" data-icon="check"
+		<a href="#" id="btnSubmitTimecardApproval" data-role="button" data-icon="submit-approval"
 			data-iconpos="left" data-inline="true"
 			style="float:left;">Submit</a>
 	</div>
