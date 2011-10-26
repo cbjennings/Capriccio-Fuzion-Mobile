@@ -467,7 +467,7 @@ input {
 }
 
 .ui-navbar .ui-btn-icon-top .ui-icon {
-	top:0px;
+	top:5px;
 }
 
 
@@ -475,7 +475,7 @@ input {
 	display:inline-block;
 	font-size:16px;
 	position:relative;
-	top:-15px;
+	top:-5px;
 	cursor:pointer;
 	padding: 0 2em;
 }
