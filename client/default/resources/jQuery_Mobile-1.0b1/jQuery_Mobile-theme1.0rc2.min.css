@@ -529,7 +529,7 @@ input {
 
 #TimeCardDetailHeader h1:before {
 	content: url(images/FuzionSprites_18.png);
-	position:abdolute;
+	position:absolute;
 	height:24px;
 	width:24px;
 	overflow:hidden;
