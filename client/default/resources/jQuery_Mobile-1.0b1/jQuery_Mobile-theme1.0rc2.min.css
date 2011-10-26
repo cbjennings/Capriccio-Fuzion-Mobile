@@ -476,6 +476,8 @@ input {
 	font-size:16px;
 	position:relative;
 	top:-15px;
+	cursor:pointer;
+	padding: 0 2em;
 }
 
 .ui-day-select {
