@@ -471,7 +471,7 @@ input {
 }
 
 
-.ui-navbar h1 {
+.ui-navbar.ui-day-select h1 {
 	display:inline-block;
 	font-size:16px;
 	position:relative;
@@ -482,10 +482,12 @@ input {
 
 .ui-day-select {
 	text-align:center;
-	clear:both;
+	
 }
 
-
+.ui-header .ui-navbar {
+	clear:both;
+}
 /* DayView */
 #entryList-contain {
 	padding-bottom: 120px;
