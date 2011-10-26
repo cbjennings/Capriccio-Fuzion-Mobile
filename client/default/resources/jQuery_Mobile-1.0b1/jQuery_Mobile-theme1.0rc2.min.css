@@ -420,7 +420,7 @@ input {
 	display:table;
 }
 
-.ui-tab-container .tab {
+.ui-tab-container .tab { 
 	background-color:rgba(0,0,0,.25);
 	padding:4px 7px 7px 7px;
 	margin-top:3px;
