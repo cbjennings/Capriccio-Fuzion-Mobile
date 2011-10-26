@@ -413,8 +413,9 @@ input {
 
 /* tabs */
 .ui-tab-container {
-	clear:both;
 	padding-top:10px;	
+	font-weight:normal;
+	font-size:9pt;
 }
 
 .ui-tab-container .tab {
