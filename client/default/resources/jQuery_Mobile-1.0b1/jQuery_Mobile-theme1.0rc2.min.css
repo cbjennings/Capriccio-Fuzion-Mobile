@@ -109,14 +109,14 @@ input {
 }
 
 .ui-btn-up-c {
-	background: rgb(224,243,250); /* Old browsers */
-	background: -moz-linear-gradient(top, rgba(224,243,250,1) 0%, rgba(216,240,252,1) 50%, rgba(184,226,246,1) 51%, rgba(182,223,253,1) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(224,243,250,1)), color-stop(50%,rgba(216,240,252,1)), color-stop(51%,rgba(184,226,246,1)), color-stop(100%,rgba(182,223,253,1))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top, rgba(224,243,250,1) 0%,rgba(216,240,252,1) 50%,rgba(184,226,246,1) 51%,rgba(182,223,253,1) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top, rgba(224,243,250,1) 0%,rgba(216,240,252,1) 50%,rgba(184,226,246,1) 51%,rgba(182,223,253,1) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top, rgba(224,243,250,1) 0%,rgba(216,240,252,1) 50%,rgba(184,226,246,1) 51%,rgba(182,223,253,1) 100%); /* IE10+ */
-	background: linear-gradient(top, rgba(224,243,250,1) 0%,rgba(216,240,252,1) 50%,rgba(184,226,246,1) 51%,rgba(182,223,253,1) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e0f3fa', endColorstr='#b6dffd',GradientType=0 ); /* IE6-9 */
+	background: #e0edff; /* Old browsers */
+	background: -moz-linear-gradient(top, #E0DEDE 0%, #D0E4DD 50%, #C1DBD9 51%, #E2F0DE 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#E0DEDE), color-stop(50%,#D0E4DD), color-stop(51%,#C1DBD9), color-stop(100%,#E2F0DE)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #E0DEDE 0%,#D0E4DD 50%,#C1DBD9 51%,#E2F0DE 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #E0DEDE 0%,#D0E4DD 50%,#C1DBD9 51%,#E2F0DE 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #E0DEDE 0%,#D0E4DD 50%,#C1DBD9 51%,#E2F0DE 100%); /* IE10+ */
+	background: linear-gradient(top, #E0DEDE 0%,#D0E4DD 50%,#C1DBD9 51%,#E2F0DE 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#E0DEDE', endColorstr='#E2F0DE',GradientType=0 ); /* IE6-9 */
 	border: 1px solid #A3C0E8;
 	color: #000000;
 	font-size:9pt;
