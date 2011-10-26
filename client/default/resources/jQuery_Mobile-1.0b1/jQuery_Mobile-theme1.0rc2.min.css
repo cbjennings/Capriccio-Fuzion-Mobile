@@ -111,7 +111,11 @@ input {
 .ui-btn-up-c {
 	color:#ffba61;
 	font-weight:normal;
-	text-shadow: #000000 0 0 1px;
+	text-shadow:
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 	
 }
 .ui-btn-up-b a.ui-link-inherit
