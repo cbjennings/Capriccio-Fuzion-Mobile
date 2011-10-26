@@ -472,4 +472,10 @@ input {
 
 .ui-navbar h1 {
 	display:inline-block;
+	font-size:16px;
 }
+
+.ui-day-select {
+	text-align:center;
+}
+.
