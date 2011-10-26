@@ -548,3 +548,7 @@ input {
 	background:none;
 	border:0;
 }
+
+.ui-content .ui-listview {
+	margin:0 !important;
+}
