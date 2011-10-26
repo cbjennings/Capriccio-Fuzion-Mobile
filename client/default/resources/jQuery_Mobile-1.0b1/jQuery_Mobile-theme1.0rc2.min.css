@@ -462,6 +462,7 @@ input {
 	margin-top:25px;
 	display:table;
 	white-space:nowrap;
+	clear:both;
 }
 
 .ui-tab-container .tab { 
@@ -472,7 +473,7 @@ input {
 	border-color: #A3C0E8;
 	border-style:solid;
 	border-collapse:collapse;
-	clear:both;
+	
 } 
 
 .ui-tab-container .tab.selected {
