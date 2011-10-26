@@ -39,6 +39,7 @@
 	</div>
 </div>
 
+<!--  Timecard Day View  -->
 <div data-role="page" data-theme="b" id="DayViewCalendar" style="min-height:100%">
 	<div data-role="header" data-theme="b">		
 		<img src="Logo.png" />
@@ -49,8 +50,6 @@
 		</div>	
 	
 	</div>
-		
-	</div>
 
 	<div data-role="content" style="padding: 0; margin: 0;">
 		<div class="ui-day-select" data-role="navbar">
@@ -58,11 +57,12 @@
 					data-inline="true" data-iconpos="notext">Previous Day</a>
 			<h1 id="HeaderDate"></h1>
 			<a href="#" data-role="button" data-icon="arrow-r" id="btnDayNext"
-				data-inline="true" data-iconpos="notext">Next Day</a> <span
-				style="display: none;"> <input name="fkDate" id="fkDate"
-				type="date" data-role="datebox"
-				data-options='{"useDialogForceFalse": true,"mode": "calbox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
-				data-theme='b' style="display: none;" /> </span>
+				data-inline="true" data-iconpos="notext">Next Day</a>
+			<span
+			style="display: none;"> <input name="fkDate" id="fkDate"
+			type="date" data-role="datebox"
+			data-options='{"useDialogForceFalse": true,"mode": "calbox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
+			data-theme='b' style="display: none;" /> </span>
 		</div>
 		<div id="entryList-contain" style="margin: 0; padding: 0;"></div>
 		<br /> <a href="#" id="btnNewTimecard" data-role="button"
