@@ -527,15 +527,10 @@ input {
 	overflow-y:visible !important;
 }
 
-#TimeCardDetailHeader h1:before {
-	content: url(images/FuzionSprites_18.png);
-	position:absolute;
-	height:24px;
-	width:24px;
-	overflow:hidden;
-	background-color:#FFF;
+#TimecardFullDate span.ui-icon-timecard {
+	float:left;
+	margin:7px;
 }
-
 
 /*  Drop Downs */
 .ui-selectmenu-list .ui-btn-up-b {
