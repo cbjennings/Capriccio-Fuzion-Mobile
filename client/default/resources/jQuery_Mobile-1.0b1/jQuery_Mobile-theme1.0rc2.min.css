@@ -37,7 +37,7 @@ input {
 	color:#fff;
 }
 
-.ui-header.ui-bar-e {
+.ui-header.ui-bar-e, ui-footer.ui-bar-e {
 	background: rgb(248,80,50); /* Old browsers */
 	background: -moz-linear-gradient(45deg, rgba(248,80,50,1) 1%, rgba(241,111,92,1) 10%, rgba(246,41,12,1) 11%, rgba(231,56,39,1) 20%, rgba(248,80,50,1) 21%, rgba(241,111,92,1) 30%, rgba(246,41,12,1) 31%, rgba(231,56,39,1) 40%, rgba(248,80,50,1) 41%, rgba(241,111,92,1) 50%, rgba(246,41,12,1) 51%, rgba(231,56,39,1) 60%, rgba(248,80,50,1) 61%, rgba(241,111,92,1) 70%, rgba(246,41,12,1) 71%, rgba(231,56,39,1) 80%, rgba(248,80,50,1) 81%, rgba(241,111,92,1) 90%, rgba(246,41,12,1) 91%, rgba(231,56,39,1) 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left bottom, right top, color-stop(1%,rgba(248,80,50,1)), color-stop(10%,rgba(241,111,92,1)), color-stop(11%,rgba(246,41,12,1)), color-stop(20%,rgba(231,56,39,1)), color-stop(21%,rgba(248,80,50,1)), color-stop(30%,rgba(241,111,92,1)), color-stop(31%,rgba(246,41,12,1)), color-stop(40%,rgba(231,56,39,1)), color-stop(41%,rgba(248,80,50,1)), color-stop(50%,rgba(241,111,92,1)), color-stop(51%,rgba(246,41,12,1)), color-stop(60%,rgba(231,56,39,1)), color-stop(61%,rgba(248,80,50,1)), color-stop(70%,rgba(241,111,92,1)), color-stop(71%,rgba(246,41,12,1)), color-stop(80%,rgba(231,56,39,1)), color-stop(81%,rgba(248,80,50,1)), color-stop(90%,rgba(241,111,92,1)), color-stop(91%,rgba(246,41,12,1)), color-stop(100%,rgba(231,56,39,1))); /* Chrome,Safari4+ */
@@ -59,6 +59,13 @@ input {
 	background: linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 	color:#FFF;
+}
+
+.ui-footer.ui-bar-e .ui-btn-up-e, 
+.ui-footer.ui-bar-e .ui-btn-down-e, 
+.ui-footer.ui-bar-e .ui-btn-hover-e {
+	color:#FFF;
+	border-color:#999;	
 }
 
 .ui-body.ui-field-contain {
