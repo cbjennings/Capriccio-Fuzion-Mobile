@@ -623,3 +623,7 @@ input {
 .ui-dialog .ui-header h1 {
 	padding-left:30px;
 }
+
+.ui-dialog .ui-footer .ui-btn {
+	padding:5px;
+}
