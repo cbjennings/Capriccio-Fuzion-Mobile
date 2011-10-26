@@ -417,6 +417,7 @@ input {
 	font-weight:normal;
 	font-size:11pt;
 	margin-top:25px;
+	display:table;
 }
 
 .ui-tab-container .tab {
