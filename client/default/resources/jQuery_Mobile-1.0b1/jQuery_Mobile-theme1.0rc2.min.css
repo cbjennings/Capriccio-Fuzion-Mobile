@@ -529,3 +529,17 @@ input {
 	background: #fff;
 }
 
+.ui-input-datebox .ui-btn-up-b {
+	background:none;
+	border:0;
+}
+
+.ui-input-datebox .ui-btn-hover-b {
+	background:none;
+	border:0;
+}
+
+.ui-input-datebox .ui-btn-down-b {
+	background:none;
+	border:0;
+}
