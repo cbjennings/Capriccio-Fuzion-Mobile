@@ -494,7 +494,7 @@ input {
 	background-position:left top;
 }
 
-#entryList-contain .ui-li {
+#entryList-contain li.ui-li {
 	background-color:#fff;
 	border: 1px solid #A3C0E8;
 }
