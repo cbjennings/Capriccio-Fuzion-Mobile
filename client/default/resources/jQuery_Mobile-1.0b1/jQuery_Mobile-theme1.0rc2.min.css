@@ -409,3 +409,25 @@ input {
 	clear:both;
 	height:15px;
 }
+
+
+/* tabs */
+.ui-tab-container {
+	clear:both;
+	padding-top:10px;	
+}
+
+.ui-tab-container .tab {
+	background-color:rgba(0,0,0,.25);
+	padding:2px 5px 5px 5px;
+	margin-top:3px;
+	border: 1px 1px 0 1px #A3C0E8;
+	border-style:solid;
+	border-collapse:collapse;
+}
+
+.ui-tab-container .tab.selected {
+	background-color:rgba(255,255,255.25);
+	padding: 5px;
+	margin-top:0;
+}
