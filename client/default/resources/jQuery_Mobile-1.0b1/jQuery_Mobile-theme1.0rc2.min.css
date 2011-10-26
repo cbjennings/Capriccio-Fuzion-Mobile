@@ -457,6 +457,8 @@ input {
 .ui-navbar .ui-btn {
 	border:0;
 	background:none;
+	width:24px;
+	height:24px;
 }
 
 
