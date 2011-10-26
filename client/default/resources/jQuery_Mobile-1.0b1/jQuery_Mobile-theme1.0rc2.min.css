@@ -508,3 +508,9 @@ input {
 	border-width: 0 1px;
 	background:none;
 }
+
+
+/* Timecard Detail */
+#TimeCardForm {
+	overflow:visible !important;
+}
