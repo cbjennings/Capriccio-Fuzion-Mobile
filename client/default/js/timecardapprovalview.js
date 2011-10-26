@@ -41,8 +41,10 @@ $("#TimecardApprovalDetail").live(
 			$("#btnSubmitTimecardApproval").click(function() {
 				//alert('submit approval clicked');
 				$.mobile.changePage($("#TimecardApprovalDialog"), {
-					transition : "pop"
+					transition : "pop",
+					
 				});
+				$("#TimecardApprovalDialog .ui-header a:jqmData(icon='delete')").remove();
 			});
 
 			$("#btnConfirmYes").click(
