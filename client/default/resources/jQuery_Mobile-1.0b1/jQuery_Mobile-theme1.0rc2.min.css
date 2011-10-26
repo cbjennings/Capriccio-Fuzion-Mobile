@@ -493,7 +493,10 @@ input {
 
 .ui-navbar h1 {
 	font-size:9pt;
+	padding-left:29px;
 }
+
+
 /* DayView */
 #entryList-contain {
 	padding-bottom: 120px;
@@ -520,7 +523,16 @@ input {
 
 /* Timecard Detail */
 #TimeCardForm {
-	height:300px;
+	overflow-x:visible !important;
+	overflow-y:visible !important;
+}
+
+#TimeCardDetailHeader h1:before {
+	content: url(images/FuzionSprites_18.png);
+	position:abdolute;
+	height:24px;
+	width:24px;
+	overflow:hidden;
 }
 
 
