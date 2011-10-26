@@ -552,3 +552,7 @@ input {
 .ui-content .ui-listview {
 	margin:0 !important;
 }
+
+.ui-li-heading, .ui-li-aside {
+	font-size:13px;
+}
