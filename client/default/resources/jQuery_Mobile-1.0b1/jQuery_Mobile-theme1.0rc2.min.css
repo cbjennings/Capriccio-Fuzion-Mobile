@@ -456,7 +456,7 @@ input {
 
 /* tabs */
 .ui-tab-container {
-	padding-top:10px;	
+	padding-top:2px;	
 	font-weight:normal;
 	font-size:11pt;
 	margin-top:25px;
@@ -472,7 +472,7 @@ input {
 	border-color: #A3C0E8;
 	border-style:solid;
 	border-collapse:collapse;
-	float:left;
+	clear:both;
 } 
 
 .ui-tab-container .tab.selected {
