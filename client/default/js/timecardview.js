@@ -72,7 +72,7 @@ function loadTimecard(id) {
 	});
 
 	var listheight = winheight - 90;
-	$("#TimeCardForm").css("height", listheight + "px").css("overflow", "auto");
+	//$("#TimeCardForm").css("height", listheight + "px").css("overflow", "auto");
 
 	if (!id.getHours) {
 		$("#txtId").val(id);
