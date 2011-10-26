@@ -325,7 +325,7 @@ input {
 	
 	.ui-icon.ui-icon-new,.ui-icon.ui-icon-timecard,
 	.ui-icon.ui-icon-login,.ui-icon.ui-icon-approval,
-	.ui-icon.ui-icon-delete,.ui-icon.ui-icon-expense,
+	.ui-icon.ui-icon-delete-obj,.ui-icon.ui-icon-expense,
 	.ui-icon.ui-icon-submit-approval,.ui-icon.ui-icon-save {
 		background:rgba(0,0,0,0);
 		background-image: url(images/FuzionSprites_36.png);
@@ -357,7 +357,7 @@ input {
 	background-repeat:no-repeat;
 	background-position: -108px 50%;
 }
-.ui-icon-delete {
+.ui-icon-delete-obj {
 	background-image: url(images/FuzionSprites_18.png);
 	background-repeat:no-repeat;
 	background-position: -144px 50%;
