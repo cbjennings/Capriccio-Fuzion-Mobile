@@ -202,5 +202,3 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 	});
 
 });
-
-$.mobile.fixedToolbars.setTouchToggleEnabled(false)

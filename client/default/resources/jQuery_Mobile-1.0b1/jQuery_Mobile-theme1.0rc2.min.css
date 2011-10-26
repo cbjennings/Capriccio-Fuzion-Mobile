@@ -556,3 +556,7 @@ input {
 .ui-li-heading, .ui-li-aside {
 	font-size:13px;
 }
+
+.ui-li-desc {
+	font-size: 10px;
+}
