@@ -49,18 +49,21 @@
 		</div>	
 	
 	</div>
-		<a href="#" data-role="button" data-icon="arrow-l" id="btnDayPrev"
-			data-inline="true" data-iconpos="notext">Previous Day</a>
-		<h1 id="HeaderDate"></h1>
-		<a href="#" data-role="button" data-icon="arrow-r" id="btnDayNext"
-			data-inline="true" data-iconpos="notext">Next Day</a> <span
-			style="display: none;"> <input name="fkDate" id="fkDate"
-			type="date" data-role="datebox"
-			data-options='{"useDialogForceFalse": true,"mode": "calbox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
-			data-theme='b' style="display: none;" /> </span>
+		
 	</div>
 
 	<div data-role="content" style="padding: 0; margin: 0;">
+		<div class="ui-day-select" data-role="navbar">
+			<a href="#" data-role="button" data-icon="arrow-l" id="btnDayPrev"
+					data-inline="true" data-iconpos="notext">Previous Day</a>
+			<h1 id="HeaderDate"></h1>
+			<a href="#" data-role="button" data-icon="arrow-r" id="btnDayNext"
+				data-inline="true" data-iconpos="notext">Next Day</a> <span
+				style="display: none;"> <input name="fkDate" id="fkDate"
+				type="date" data-role="datebox"
+				data-options='{"useDialogForceFalse": true,"mode": "calbox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
+				data-theme='b' style="display: none;" /> </span>
+		</div>
 		<div id="entryList-contain" style="margin: 0; padding: 0;"></div>
 		<br /> <a href="#" id="btnNewTimecard" data-role="button"
 			data-icon="new" data-iconpos="left" data-inline="true"
