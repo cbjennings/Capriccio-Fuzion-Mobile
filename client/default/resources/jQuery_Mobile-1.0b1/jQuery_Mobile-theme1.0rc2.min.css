@@ -502,4 +502,9 @@ input {
 #entryList-contain hr {
 	color:#A3C0E8;
 }
-.
+
+
+.ui-navbar .ui-btn, .ui-header .ui-btn, .ui-footer .ui-btn {
+	border-width: 0 1px;
+	background:none;
+}
