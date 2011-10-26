@@ -488,6 +488,10 @@ input {
 .ui-header .ui-navbar {
 	clear:both;
 }
+
+.ui-navbar h1 {
+	font-size:9pt;
+}
 /* DayView */
 #entryList-contain {
 	padding-bottom: 120px;
