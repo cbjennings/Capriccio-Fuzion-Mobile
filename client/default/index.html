@@ -164,10 +164,18 @@
 </div>
 
 <div data-role="page" id="TimecardApprovalDetail" data-theme="b">
-	<div data-role="header" data-theme="b">
-		<h1>Timecard Approval</h1>
-		<a href="#" data-role="button" data-icon="delete" data-iconpos="notext"
-				data-inline="true" data-rel="back" style="float:right;">Close</a>
+	<div data-role="header" data-theme="b" data-position="fixed">
+		<img src="Logo.png" />
+		<div class="ui-tab-container">
+			<div class="tab selected" data-iconpos="left" data-icon="timecard">Timecards</div>
+			<div class="tab" data-iconpos="left" data-icon="expense">Expenses</div>
+		</div>	
+		
+		<div data-icon="timecard-approval" data-iconpos="left" data-role="navbar">
+			<a href="#" id="btnCloseTimecardApproval" data-role="button" data-icon="delete" 
+				data-iconpos="notext" data-inline="true" style="float:right;">Close</a>
+			<span class="ui-icon ui-icon-timecard"></span><h1>Timecard Approval</h1>
+		</div>
 	</div>
 
 	<div data-role="content">
