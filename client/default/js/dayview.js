@@ -122,7 +122,7 @@ function goDay(date) {
 											"height",
 											Math.round(hourHeight * TimeSpan)
 													+ "px").css("top",
-											Math.round(margintop + 90) + "px")
+											Math.round(margintop + 102) + "px")
 									.css("position", "absolute").data("id",
 											res.timecards[i].id)
 									.click(function() {
@@ -141,7 +141,7 @@ function goDay(date) {
 
 							if ((res.timecards[(parseInt(i) - 1)] && res.timecards[(parseInt(i) - 1)].endon > res.timecards[i].starton)
 									|| (res.timecards[(parseInt(i) + 1)] && res.timecards[(parseInt(i) + 1)].starton < res.timecards[i].endon)) {
-								li.css("width", "42%");
+								li.css("width", "43%");
 							} else {
 								li.css("width", "90%");
 							}
