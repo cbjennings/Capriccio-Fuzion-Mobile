@@ -203,11 +203,10 @@ input {
 
 .ui-loader {
 	background-color: #fff;
-	border: 1px solid #A3C0E8;
+	border: 2px solid #A3C0E8;
 	color:#2C4D79;
 	font-weight:100 !important;
-	
-	font-size:9px;
+	font-size:13px;
 }
 .ui-icon-loading.spin {
 	background-image: url('images/ajax-loader.gif');
