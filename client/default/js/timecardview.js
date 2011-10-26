@@ -56,6 +56,8 @@ $("#TimecardDetail").live(
 								$.mobile.changePage($("#Validation"), {
 									transition : "pop"
 								});
+								alert($("#Validation .ui-header a:jqmData(icon='delete')"));
+								$("#Validation .ui-header a:jqmData(icon='delete')").remove();
 							}
 							$.mobile.hidePageLoadingMsg();
 						});
