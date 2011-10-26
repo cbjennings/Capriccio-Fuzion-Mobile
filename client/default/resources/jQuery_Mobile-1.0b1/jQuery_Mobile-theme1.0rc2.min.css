@@ -488,6 +488,9 @@ input {
 /* DayView */
 #entryList-contain {
 	padding-bottom: 120px;
+	background-image: url(cal_back.png);
+	background-repeat:no-repeat;
+	background-position:left top;
 }
 
 .
