@@ -341,6 +341,10 @@ input {
 	background-position: 	-720px 50%;
 }
 
+.ui-navbar .ui-btn-icon-left .ui-icon, 
+.ui-navbar .ui-btn-icon-right .ui-icon {
+	margin-top:-7px;
+}
 
 /* checks,radios */
 .ui-checkbox .ui-icon {
