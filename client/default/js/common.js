@@ -47,3 +47,9 @@ function CallService(ServiceName, Data, Success, Error) {
 		}
 	});
 }
+
+$(document).bind("mobileinit", function(){
+	  $.extend(  $.mobile , {
+	    loadingMessage: "Loading..."
+	  });
+	});
