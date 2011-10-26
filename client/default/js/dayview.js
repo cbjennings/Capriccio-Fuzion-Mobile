@@ -104,7 +104,7 @@ function goDay(date) {
 																			res.timecards[i].comments)
 																	.css(
 																			"border",
-																			"1px solid #ddd")
+																			"1px solid #666")
 																	.css(
 																			"border-width",
 																			"1px 0 0 0")
@@ -122,8 +122,8 @@ function goDay(date) {
 											"height",
 											Math.round(hourHeight * TimeSpan)
 													+ "px").css("top",
-											Math.round(margintop + 102) + "px")
-									.css("position", "absolute").data("id",
+											Math.round(margintop) + "px")
+									.css("position", "relative").data("id",
 											res.timecards[i].id)
 									.click(function() {
 
