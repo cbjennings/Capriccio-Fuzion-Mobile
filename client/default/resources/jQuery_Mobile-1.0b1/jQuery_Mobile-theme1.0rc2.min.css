@@ -569,7 +569,7 @@ input {
 /* Timecard Detail */
 
 
-#TimecardDetailHeader span.ui-icon-timecard {
+#navbar span.ui-icon {
 	float:left;
 	margin:7px;
 }
