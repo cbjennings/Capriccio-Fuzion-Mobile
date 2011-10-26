@@ -71,9 +71,7 @@ function loadTimecard(id) {
 	}, function(code, errorprops, params) { /* none */
 	});
 
-	var listheight = winheight - 90;
-	//$("#TimeCardForm").css("height", listheight + "px").css("overflow", "auto");
-
+	
 	if (!id.getHours) {
 		$("#txtId").val(id);
 		$fh.act({
