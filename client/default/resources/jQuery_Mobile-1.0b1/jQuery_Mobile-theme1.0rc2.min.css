@@ -470,4 +470,6 @@ input {
 }
 
 
-
+.ui-navbar h1 {
+	display:inline-block;
+}
