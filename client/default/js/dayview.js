@@ -50,7 +50,7 @@ function goDay(date) {
 						setDate(d);
 						$("#entryList-contain")
 								.html(
-										'<ul data-role="listview" data-theme="b" id="entryList" style="width:85%;float:right;margin-right:1px;margin-top:0;"></ul>')
+										'<ul data-role="listview" data-theme="e" id="entryList" style="width:85%;float:right;margin-right:1px;margin-top:0;"></ul>')
 								.css(
 										"background-size",
 										"auto " + 600 + "px");
