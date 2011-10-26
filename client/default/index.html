@@ -96,7 +96,33 @@
 		<div id="TimecardDetailHeader" data-icon="timecard" data-iconpos="left"></div>
 		<input type="text" id="TimecardFullDate" style="display: none;" />
 		<form>
-			
+			<ul  data-theme="b" id="TimeCardForm">
+				<li data-role="fieldcontain" style="display: none;"><label
+					for="txtId">ID:</label> <input type="text" name="txtId" id="txtId"
+					value="" /></li>
+				<li data-role="fieldcontain"><label for="txtStartOn">Start
+						On:</label> <input type="date" data-role="datebox"
+					data-options='{"useDialogForceFalse": true,"mode": "timebox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
+					name="txtStartOn" id="txtStartOn" value="" /></li>
+				<li data-role="fieldcontain"><label for="txtEndOn">End
+						On:</label> <input type="date" data-role="datebox"
+					data-options='{"useDialogForceFalse": true,"mode": "timebox", "timeFormat": 12, "pickPageTheme":"b", "pickPageInputTheme":"b", "pickPageButtonTheme":"b"}'
+					name="txtEndOn" id="txtEndOn" value="" /></li>
+				<li data-role="fieldcontain"><label for="txtChargeNumber">Charge
+						Number:</label> <select name="txtChargeNumber" id="txtChargeNumber">
+						<option value=""></option>
+				</select></li>
+				<li data-role="fieldcontain"><label for="txtReason">Reason:</label>
+					<select name="txtReason" id="txtReason" value="">
+						<option value=""></option>
+				</select></li>
+				<li data-role="fieldcontain"><label for="txtComments">Comments:</label>
+					<textarea name="txtComments" id="txtComments"></textarea></li>
+				<li id="mileageList" class="button-up-b" style="display: none;">
+					Mileage Reports <span
+					class="ui-icon ui-icon-arrow-r ui-icon-shadow"
+					style="float: right;">&nbsp;</span></li>
+			</ul>
 		</form>
 	</div>
 	<div data-role="footer" data-position="fixed" data-theme="b">
