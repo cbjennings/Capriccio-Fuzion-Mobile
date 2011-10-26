@@ -616,4 +616,6 @@ input {
 .ui-dialog .ui-header, .ui-dialog .ui-content, .ui-dialog .ui-footer {
 	width:100%;
 	max-width:100%;
+	margin:0;
+	padding: 0 0 0 15px;
 }
