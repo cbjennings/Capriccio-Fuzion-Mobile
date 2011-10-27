@@ -644,21 +644,21 @@ input {
 
 /*  dialogs  */
  
-.ui-dialog .ui-header span.ui-obj-icon {
-	margin-top:0;
-}
+
 
 
 .ui-navbar span.ui-obj-icon, .ui-dialog .ui-header span.ui-obj-icon  {
 	float:left;
 	margin:7px;
 }
-
+.ui-dialog .ui-header span.ui-obj-icon {
+	margin-top:0;
+}
 .ui-dialog .ui-content {
 	border: 1px solid rgba(246,41,12,1);
 	border-width: 0 1px 1px 1px;
-	padding: 14px 0;
-	margin-right:1px;
+	//padding: 14px 0;
+	//margin-right:1px;
 }
 
 .ui-dialog.ui-body-b .ui-content {
