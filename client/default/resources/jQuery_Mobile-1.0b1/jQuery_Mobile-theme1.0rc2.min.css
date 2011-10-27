@@ -83,6 +83,7 @@ input {
 
 .ui-header.ui-bar-b img {
 	float:right;
+	height:36px;
 }
 
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
@@ -501,7 +502,6 @@ input {
 	margin-top:25px;
 	display:table;
 	white-space:nowrap;
-	clear:both;
 }
 
 .ui-tab-container .tab { 
