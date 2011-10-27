@@ -700,3 +700,14 @@ input {
 	text-decoration:none;
 	font-weight:bold;
 }
+
+
+/*  DatePicker */
+.ui-datebox-container {
+	width:200px;
+}
+.ui-datebox-griddate {
+	width:25px;
+	height:25px;
+	line-height:25px;
+}
