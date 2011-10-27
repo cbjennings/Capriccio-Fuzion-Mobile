@@ -81,7 +81,7 @@ function CallService(ServiceName, Data, Success, Error) {
 			$("<li>Please verify data service, double check your Company Id, and try again.</li>")
 				.appendTo($("#errorList"));
 			
-			$.mobile.hidePageLoadingMessage();
+			$.mobile.hidePageLoadingMsg();
 			$.mobile.changePage($("#Validation"), {
 				transition : "pop"
 			});	
