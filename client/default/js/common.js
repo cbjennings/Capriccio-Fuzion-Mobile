@@ -2,7 +2,7 @@ var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
 	//alert(JSON.stringify(Data));
-	$.mobile.showPageLoadingMessage();
+	$.mobile.showPageLoadingMsg();
 	
 	$.ajax({
 		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
