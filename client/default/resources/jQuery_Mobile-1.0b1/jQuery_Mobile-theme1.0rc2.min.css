@@ -59,6 +59,7 @@ input {
 	background: linear-gradient(top, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 	color:#FFF;
+	height:100%;
 }
 
 .ui-footer.ui-bar-e .ui-btn-up-e, 
@@ -66,6 +67,8 @@ input {
 .ui-footer.ui-bar-e .ui-btn-hover-e {
 	color:#FFF;
 	border-color:#999;	
+	font-weight:bold;
+	text-decoration:none;
 }
 
 .ui-body.ui-field-contain {
@@ -605,11 +608,6 @@ input {
 /* Timecard Detail */
 
 
-.ui-navbar span.ui-obj-icon, .ui-dialog .ui-header span.ui-obj-icon  {
-	float:left;
-	margin:7px;
-}
-
 /*  Drop Downs */
 .ui-selectmenu-list .ui-btn-up-b {
 	background: #fff;
@@ -645,17 +643,14 @@ input {
 
 
 /*  dialogs  */
-.ui-dialog .ui-header, .ui-dialog .ui-content, .ui-dialog .ui-footer {
-	width:100%;
-	max-width:100%;
-	margin:0;
-	padding: 0;
-}
 
 .ui-dialog .ui-header span.ui-obj-icon {
 	margin-top:0;
 }
 
-.ui-dialog .ui-content {
-	padding:15px;
+
+.ui-navbar span.ui-obj-icon, .ui-dialog .ui-header span.ui-obj-icon  {
+	float:left;
+	margin:7px;
 }
+
