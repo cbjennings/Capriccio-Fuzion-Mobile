@@ -644,9 +644,6 @@ input {
 
 /*  dialogs  */
  
-
-
-
 .ui-navbar span.ui-obj-icon, .ui-dialog .ui-header span.ui-obj-icon  {
 	float:left;
 	margin:7px;
@@ -661,6 +658,18 @@ input {
 	//margin-right:1px;
 }
 
+.ui-dialog .ui-header {
+	border-width: 1px 1px 0 1px;
+}
+
+.ui-dialog.ui-body-b .ui-header {
+	border-color: #A3C0E8;
+}
+
+.ui-dialog.ui-body-e .ui-header {
+	border-color: rgba(246,41,12,1);
+}
+
 .ui-dialog.ui-body-b .ui-content {
 	border-color:#A3C0E8;
 	border-bottom-width:0;
@@ -673,5 +682,9 @@ input {
 }
 
 .ui-dialog .ui-footer.ui-bar-b {
-	padding:0;
+	padding:0 15px;
+}
+
+.ui-dialog .ui-header h1 {
+	font-size:12px;
 }
