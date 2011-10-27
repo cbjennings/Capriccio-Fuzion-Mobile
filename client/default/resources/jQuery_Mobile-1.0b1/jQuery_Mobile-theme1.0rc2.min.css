@@ -83,7 +83,7 @@ input {
 
 .ui-header.ui-bar-b img {
 	float:right;
-	height:36px;
+	width:40px;
 }
 
 .ui-bar-b, .ui-bar-b input, .ui-bar-b select, .ui-bar-b textarea,.ui-bar-b button
@@ -499,7 +499,7 @@ input {
 	padding-top:2px;	
 	font-weight:normal;
 	font-size:11pt;
-	margin-top:25px;
+	margin-bottom:-1px;
 	display:table;
 	white-space:nowrap;
 }
