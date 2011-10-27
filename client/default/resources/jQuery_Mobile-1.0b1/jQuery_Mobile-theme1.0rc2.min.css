@@ -706,8 +706,23 @@ input {
 .ui-datebox-container {
 	width:200px;
 }
+
+.ui-datebox-screen {
+	background:rgba(255,255,255,.5);
+}
 .ui-datebox-griddate {
 	width:25px;
 	height:25px;
 	line-height:25px;
+}
+
+.ui-datebox-controls {
+	margin:auto;
+	white-space: nowrap;
+}
+
+.ui-datebox-controls input, .ui-datebox-controls textarea{
+	max-width:50px !important;
+	padding: 4px 0 !important;
+	margin: .5em 5px;
 }
