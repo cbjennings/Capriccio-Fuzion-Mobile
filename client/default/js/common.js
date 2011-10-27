@@ -8,6 +8,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
 		data:Data,
 		dataType:"jsonp",
+		timeout:10000,
 		success:function(d) {
 			var data=JSON.parse(d.d);
 			if(data.success===false && Error==="DisplayMessages") {
