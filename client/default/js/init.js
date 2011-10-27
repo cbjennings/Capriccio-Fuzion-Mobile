@@ -24,12 +24,13 @@ $(function() {
 		$("#txtCompany").val(company);
 	});
 
+	$.mobile.changePage($("#Login"));
 	$("#btnLogin").click(
 			function() {
 				if ($("#txtUsername").val() && $("#txtPassword").val()
 						&& $("#txtCompany").val()) {
 
-					$.mobile.changePage($("#Login"));
+					
 					CallService('Login', {
 						username : JSON.stringify($("#txtUsername").val()),
 						password : JSON.stringify($("#txtPassword").val())
