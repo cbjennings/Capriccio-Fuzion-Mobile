@@ -24,7 +24,7 @@ $(function() {
 		$("#txtCompany").val(company);
 	});
 
-	$.mobile.changePage($("#Login"));
+	//$.mobile.changePage($("#Login"));
 	$("#btnLogin").click(
 			function() {
 				if ($("#txtUsername").val() && $("#txtPassword").val()
