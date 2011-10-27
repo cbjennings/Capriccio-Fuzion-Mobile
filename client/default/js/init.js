@@ -1,7 +1,7 @@
 //Ready Function
 $(function() {
 	
-	
+	$.mobile.changePage($("#Login"));
   $.mobile.selectmenu.prototype.options.nativeMenu = false;
    var user, pass, company;
   $fh.data({key:'username'}, function(res) {
@@ -43,13 +43,14 @@ $(function() {
             }
             sessionId = res.sessionId
             $.mobile.hidePageLoadingMsg();
-            $.mobile.changePage($("#DayViewCalendar"));  
+            goDay(new Date());
+            //$.mobile.changePage($("#DayViewCalendar"));  
         },
         "DisplayMessages"
 	  );
     }
   });
   if(user&&pass&&company) $("#btnLogin").click(); 
-  $( '#DayViewCalendar' ).live( 'pageinit',function(event){ });
+  
   $.mobile.fixedToolbars.setTouchToggleEnabled(false)
 });
