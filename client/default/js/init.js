@@ -1,5 +1,5 @@
 //Ready Function
-$fh.ready(function() {
+$(function() {
 	
 	
   $.mobile.selectmenu.prototype.options.nativeMenu = false;
