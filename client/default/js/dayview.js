@@ -122,7 +122,7 @@ function goDay(date) {
 											"height",
 											Math.round(hourHeight * TimeSpan)
 													+ "px").css("top",
-											Math.round(margintop+128) + "px")
+											Math.round(margintop+66) + "px")
 									.css("position", "absolute").data("id",
 											res.timecards[i].id)
 									.click(function() {
@@ -133,7 +133,7 @@ function goDay(date) {
 
 							if (float == "right") {
 								float = "left";
-								li.css("left", "10%");
+								li.css("left", "15%");
 							} else {
 								float = "right";
 								li.css("right", "00");
@@ -141,9 +141,9 @@ function goDay(date) {
 
 							if ((res.timecards[(parseInt(i) - 1)] && res.timecards[(parseInt(i) - 1)].endon > res.timecards[i].starton)
 									|| (res.timecards[(parseInt(i) + 1)] && res.timecards[(parseInt(i) + 1)].starton < res.timecards[i].endon)) {
-								li.css("width", "43%");
+								li.css("width", "40%");
 							} else {
-								li.css("width", "90%");
+								li.css("width", "85%");
 							}
 							$("#entryList").append(li);
 						}
