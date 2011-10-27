@@ -661,8 +661,17 @@ input {
 	margin-right:1px;
 }
 
+.ui-dialog.ui-body-b .ui-content {
+	border-color:#A3C0E8;
+	border-bottom-width:0;
+}
+
 .ui-dialog {
 	width:95%;
 	max-width:95%;
 	margin:auto;
+}
+
+.ui-dialog .ui-footer.ui-bar-b {
+	padding:0;
 }
