@@ -64,6 +64,7 @@ function CallService(ServiceName, Data, Success, Error) {
 					$.mobile.changePage($("#Validation"), {
 						transition : "pop"
 					});	
+					$("#Validation .ui-header a:jqmData(icon='delete')").remove();
 				}
 			} else if (data.success===false) {
 				Error(data);
@@ -82,9 +83,14 @@ function CallService(ServiceName, Data, Success, Error) {
 				.appendTo($("#errorList"));
 			
 			$.mobile.hidePageLoadingMsg();
+			
+			$.mobile.changePage($("#Login"), {
+				transition : "pop"
+			});	
 			$.mobile.changePage($("#Validation"), {
 				transition : "pop"
 			});	
+			$("#Validation .ui-header a:jqmData(icon='delete')").remove();
 			
 		}
 	});
