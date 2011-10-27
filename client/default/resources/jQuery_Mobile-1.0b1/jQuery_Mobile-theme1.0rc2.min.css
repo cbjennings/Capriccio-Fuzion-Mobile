@@ -726,3 +726,7 @@ input {
 	padding: 4px 0 !important;
 	margin: .5em 5px;
 }
+
+.ui-datebox-controls div {
+	width:50px;
+}
