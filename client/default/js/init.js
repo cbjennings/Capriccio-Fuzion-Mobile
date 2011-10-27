@@ -41,6 +41,7 @@ $(function() {
             } else {
               $fh.data({act:'save', key:'password', val:''});
             }
+            sessionId = res.sessionId
             $.mobile.hidePageLoadingMsg();
             $.mobile.changePage($("#DayViewCalendar"));  
         },
