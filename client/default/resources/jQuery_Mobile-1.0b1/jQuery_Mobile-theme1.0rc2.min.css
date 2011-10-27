@@ -656,5 +656,5 @@ input {
 
 .ui-dialog .ui-content {
 	border: 1px solid #ffba61;
-	border-width: 0 1px;
+	border-width: 0 1px 1px 1px;
 }
