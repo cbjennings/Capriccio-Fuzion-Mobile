@@ -32,7 +32,7 @@ function goDay(date) {
 			'getDate', 
 			{
 				date:JSON.stringify(adjusteddate.toDateString()),
-				sessionId:sessionId},
+				sessionId:JSON.stringify(sessionId)},
 			function(res) {
 				var hourHeight=600/24;
 				var d = new Date(res.date);
