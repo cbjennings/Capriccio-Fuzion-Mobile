@@ -47,11 +47,13 @@ function CallService(ServiceName, Data, Success, Error) {
 	$.mobile.showPageLoadingMsg();
 	
 	$.getJSONP({
-		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
+		//url:"https://capricciofuzion.com/"+$("#txtCompany").val()+"/web/WebServices/MobileService.asmx/"+ServiceName,
+		url:"http://localhost:59708/WebServices/MobileService.asmx/"+ServiceName,
 		data:Data,
 		timeout:10000,
 		success:function(d) {
 			var data=JSON.parse(d.d);
+			//TODO:if NoSession message, try logging in again.
 			if(data.success===false && Error==="DisplayMessages") {
 				//Common error/validation message popup
 				$("#errorList").html("");
@@ -72,6 +74,7 @@ function CallService(ServiceName, Data, Success, Error) {
 				Success(data);
 			}
 			return false;
+			$.mobile.hidePageLoadingMsg();
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
 			$("#errorList").html("");

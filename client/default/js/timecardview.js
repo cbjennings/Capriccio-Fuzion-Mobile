@@ -11,15 +11,12 @@ $("#TimecardDetail").live(
 				});
 			});
 
-			
+
 			$("#btnSaveTimecard").click(
 					function() {
-						$.mobile.showPageLoadingMsg();
-						var starton = new Date($("#TimecardFullDate").val()
-								+ " " + $("#txtStartOn").val());
-						var endon = new Date($("#TimecardFullDate").val() + " "
-								+ $("#txtEndOn").val());
-						// alert($("#TimecardFullDate").val());
+						var starton = new Date($("#TimecardFullDate").val() + " " + $("#txtStartOn").val());
+						var endon = new Date($("#TimecardFullDate").val() + " " + $("#txtEndOn").val());
+//						alert($("#TimecardFullDate").val());
 						if ($("#txtStartOn").val() == "")
 							starton = "";
 						if ($("#txtEndOn").val() == "")
@@ -27,61 +24,75 @@ $("#TimecardDetail").live(
 
 						var comments = $("#txtComments").text();
 						if (comments == "")
-							comments = $("#txtComments").val()
+							comments = $("#txtComments").val();
 
 						var req = {
-							"id" : $("#txtId").val(),
-							"starton" : starton.getTime(),
-							"endon" : endon.getTime(),
-							"comments" : comments,
-							"chargenumber" : $("#txtChargeNumber").val(),
-							"reason" : $("#txtChargeNumber").val()
+								"id" : $("#txtId").val(),
+								"starton" : starton.getTime(),
+								"endon" : endon.getTime(),
+								"comments" : comments,
+								"chargenumber" : $("#txtChargeNumber").val(),
+								"reason" : $("#txtReason").val()
 						};
-						$fh.act({
-							act : 'saveTimecard',
-							secure : true,
-							req : req
-						}, function(res) {
-							if (res.success)
-								$.mobile.changePage($("#DayViewCalendar"), {
-									reverse : true
-								});
-							else {
-								$("#errorList").html("");
-
-								for ( var i in res.messages) {
-									$("<li>" + res.messages[i] + "</li>")
-											.appendTo($("#errorList"));
-								}
-								$.mobile.changePage($("#Validation"), {
-									transition : "pop"
-								});
-								$("#Validation .ui-header a:jqmData(icon='delete')").remove();
-							}
-							$.mobile.hidePageLoadingMsg();
-						});
-					});
+						CallService( 
+								'saveTimecard', 
+								req, 
+								function(res) {
+									$.mobile.changePage($("#DayViewCalendar"), {
+										reverse : true
+									});
+								}, 
+								"DisplayMessages"
+						);
+					}
+			);
 		});
 
 function loadTimecard(id) {
-	$.mobile.changePage($("#TimecardDetail"));
-	$.mobile.showPageLoadingMsg();
-	var winheight;
-	$fh.env({/* none */}, function(envprops) {
-		winheight = envprops.height;
-	}, function(code, errorprops, params) { /* none */
-	});
-
 	
-	if (!id.getHours) {
-		$("#txtId").val(id);
-		$fh.act({
-			act : 'getTimecard',
-			secure : true,
-			req : {
-				id : id
+	$.mobile.showPageLoadingMsg();
+	
+	var serviceName, req, success, error;
+	if(id.getHours) {
+		$("#TimecardFullDate").val(
+				(id.getMonth() + 1) + "/" + id.getDate() + "/"
+						+ id.getFullYear())
+		serviceName="newTimecard";
+		req={date : id.toString(), sessionId:sessionId};
+		success=function(res) {
+			$("#txtChargeNumber").html("").append(
+					$('<option value=""></option>'));
+			for ( var i in res.chargenumbers) {
+				var opt = $("<option />");
+				opt.val(res.chargenumbers[i].id)
+						.text(res.chargenumbers[i].name);
+				$("#txtChargeNumber").append(opt);
 			}
-		}, function(res) {
+			$("#txtChargeNumber").selectmenu('refresh', true);
+
+			$("#txtReason").html("").append($('<option value=""></option>'));
+			for ( var i in res.reasons) {
+				var opt = $("<option />");
+				opt.val(res.reasons[i].id).text(res.reasons[i].name);
+				$("#txtReason").append(opt);
+			}
+			$("#txtReason").selectmenu('refresh', true);
+
+			$("#txtId").val(res.guid);
+
+			$("#txtStartOn").val("");
+			$("#txtEndOn").val("");
+			$("#txtComments").text("");
+			$("#TimecardDetailHeader h1").text("New Timecard");
+			$("#btnDeleteTimecard").hide();
+			$.mobile.hidePageLoadingMsg();
+			$.mobile.changePage($("#TimecardDetail"));
+		};
+		error="DisplayMessages";
+	} else {
+		serviceName="getTimecard";
+		req={Id : id, sessionId:sessionId};
+		success=function(res) {
 			var starton = new Date(res.timecard.starton);
 			// alert(starton);
 			$("#TimecardFullDate").val(
@@ -129,46 +140,13 @@ function loadTimecard(id) {
 			
 			$("#btnDeleteTimecard").show();
 			$.mobile.hidePageLoadingMsg();
-		});
-	} else {
-		$("#TimecardFullDate").val(
-				(id.getMonth() + 1) + "/" + id.getDate() + "/"
-						+ id.getFullYear())
-		$fh.act({
-			act : 'newTimecard',
-			secure : true,
-			req : {
-				date : id.getTime()
-			}
-		}, function(res) {
-			$("#txtChargeNumber").html("").append(
-					$('<option value=""></option>'));
-			for ( var i in res.chargenumbers) {
-				var opt = $("<option />");
-				opt.val(res.chargenumbers[i].id)
-						.text(res.chargenumbers[i].name);
-				$("#txtChargeNumber").append(opt);
-			}
-			$("#txtChargeNumber").selectmenu('refresh', true);
-
-			$("#txtReason").html("").append($('<option value=""></option>'));
-			for ( var i in res.reasons) {
-				var opt = $("<option />");
-				opt.val(res.reasons[i].id).text(res.reasons[i].name);
-				$("#txtReason").append(opt);
-			}
-			$("#txtReason").selectmenu('refresh', true);
-
-			$("#txtId").val(res.guid);
-
-			$("#txtStartOn").val("");
-			$("#txtEndOn").val("");
-			$("#txtComments").text("");
-			$("#TimecardDetailHeader h1").text("New Timecard");
-			$("#btnDeleteTimecard").hide();
-			$.mobile.hidePageLoadingMsg();
-		});
+			$.mobile.changePage($("#TimecardDetail"));
+		};
+		error="DisplayMessages";
 	}
+	
+	CallService(serviceName, req, success, error);
+	
 }
 
 function formatTime(time) {

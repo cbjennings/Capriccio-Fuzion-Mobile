@@ -23,133 +23,122 @@ function setDate(d) {
 }
 
 function goDay(date) {
-	$.mobile.showPageLoadingMsg();
+	
 	setDate(date);
 	$("#entryList-contain").html("");
 	var adjusteddate = new Date(date);
 	adjusteddate.setDate(adjusteddate.getDate() - 1);
-	$fh
-			.act(
-					{
-						act : 'getDate',
-						secure : true,
-						req : {
-							date : adjusteddate.getTime()
-						}
-					},
-					function(res) {
-						var winheight;
-						$fh.env({/* none */}, function(envprops) {
-							winheight = envprops.height;
-						}, function(code, errorprops, params) { /* none */
-						});
+	CallService(
+			'getDate', 
+			{date:adjusteddate.getTime(),sessionId:sessionId},
+			function(res) {
+				var hourHeight=600/24;
+				var d = new Date(res.date);
+				d.setDate(d.getDate() + 1);
+				setDate(d);
+				$("#entryList-contain")
+						.html(
+								'<ul data-role="listview" data-theme="e" id="entryList" style="width:85%;float:right;margin-right:1px;margin-top:0;"></ul>')
+						.css(
+								"background-size",
+								"auto " + 600 + "px");
+				var float = "right";
+				for ( var i in res.timecards) {
 
-						var hourHeight=600/24;
-						var d = new Date(res.date);
-						d.setDate(d.getDate() + 1);
-						setDate(d);
-						$("#entryList-contain")
-								.html(
-										'<ul data-role="listview" data-theme="e" id="entryList" style="width:85%;float:right;margin-right:1px;margin-top:0;"></ul>')
-								.css(
-										"background-size",
-										"auto " + 600 + "px");
-						var float = "right";
-						for ( var i in res.timecards) {
+					var starton = new Date(res.timecards[i].starton);
+					var endon = new Date(res.timecards[i].endon);
 
-							var starton = new Date(res.timecards[i].starton);
-							var endon = new Date(res.timecards[i].endon);
+					var one_hour = 1000 * 60 * 60;
+					var TimeSpan = roundNumber(
+							(endon.getTime() - starton.getTime())
+									/ (one_hour), 2);
+					var prevEnd;
 
-							var one_hour = 1000 * 60 * 60;
-							var TimeSpan = roundNumber(
-									(endon.getTime() - starton.getTime())
-											/ (one_hour), 2);
-							var prevEnd;
+					prevEnd = new Date(starton);
+					prevEnd.setHours(0);
+					prevEnd.setMinutes(0);
 
-							prevEnd = new Date(starton);
-							prevEnd.setHours(0);
-							prevEnd.setMinutes(0);
+					var margintop = roundNumber(
+							((starton.getTime() - prevEnd.getTime()) / one_hour),
+							2)
+							* hourHeight;
 
-							var margintop = roundNumber(
-									((starton.getTime() - prevEnd.getTime()) / one_hour),
-									2)
-									* hourHeight;
+					var li = $("<li />");
+					li
+							.append(
+									$("<a />")
+											.attr("href", "#")
+											.css("paddingTop", "0")
+											.append(
+													$("<h6 />")
+															.text(
+																	res.timecards[i].chargenumber)
+															.css(
+																	"marginTop",
+																	"0"))
+											.append(
+													$("<span>")
+															.addClass(
+																	"ui-li-aside")
+															.text(
+																	TimeSpan
+																			+ " hours")
+															.css(
+																	"marginTop",
+																	"0"))
+											.append(
+													$("<p />")
+															.text(
+																	res.timecards[i].comments)
+															.css(
+																	"border",
+																	"1px solid #666")
+															.css(
+																	"border-width",
+																	"1px 0 0 0")
+															.css(
+																	"overflow",
+																	"hidden")
+															.css(
+																	"margin-top",
+																	"-5px")
+															.css(
+																	"padding-top",
+																	"4px"))
 
-							var li = $("<li />");
-							li
-									.append(
-											$("<a />")
-													.attr("href", "#")
-													.css("paddingTop", "0")
-													.append(
-															$("<h6 />")
-																	.text(
-																			res.timecards[i].chargenumber)
-																	.css(
-																			"marginTop",
-																			"0"))
-													.append(
-															$("<span>")
-																	.addClass(
-																			"ui-li-aside")
-																	.text(
-																			TimeSpan
-																					+ " hours")
-																	.css(
-																			"marginTop",
-																			"0"))
-													.append(
-															$("<p />")
-																	.text(
-																			res.timecards[i].comments)
-																	.css(
-																			"border",
-																			"1px solid #666")
-																	.css(
-																			"border-width",
-																			"1px 0 0 0")
-																	.css(
-																			"overflow",
-																			"hidden")
-																	.css(
-																			"margin-top",
-																			"-5px")
-																	.css(
-																			"padding-top",
-																			"4px"))
+							).css(
+									"height",
+									Math.round(hourHeight * TimeSpan)
+											+ "px").css("top",
+									Math.round(margintop+66) + "px")
+							.css("position", "absolute").data("id",
+									res.timecards[i].id)
+							.click(function() {
 
-									).css(
-											"height",
-											Math.round(hourHeight * TimeSpan)
-													+ "px").css("top",
-											Math.round(margintop+66) + "px")
-									.css("position", "absolute").data("id",
-											res.timecards[i].id)
-									.click(function() {
+								loadTimecard($(this).data("id"));
 
-										loadTimecard($(this).data("id"));
+							});
 
-									});
+					if (float == "right") {
+						float = "left";
+						li.css("left", "15%");
+					} else {
+						float = "right";
+						li.css("right", "00");
+					}
 
-							if (float == "right") {
-								float = "left";
-								li.css("left", "15%");
-							} else {
-								float = "right";
-								li.css("right", "00");
-							}
-
-							if ((res.timecards[(parseInt(i) - 1)] && res.timecards[(parseInt(i) - 1)].endon > res.timecards[i].starton)
-									|| (res.timecards[(parseInt(i) + 1)] && res.timecards[(parseInt(i) + 1)].starton < res.timecards[i].endon)) {
-								li.css("width", "40%");
-							} else {
-								li.css("width", "85%");
-							}
-							$("#entryList").append(li);
-						}
-						$("#entryList").listview();
-						$.mobile.hidePageLoadingMsg();
-					});
+					if ((res.timecards[(parseInt(i) - 1)] && res.timecards[(parseInt(i) - 1)].endon > res.timecards[i].starton)
+							|| (res.timecards[(parseInt(i) + 1)] && res.timecards[(parseInt(i) + 1)].starton < res.timecards[i].endon)) {
+						li.css("width", "40%");
+					} else {
+						li.css("width", "85%");
+					}
+					$("#entryList").append(li);
+				}
+				$("#entryList").listview();
+			},
+			"DisplayMessages"
+	);
 }
 
 $('#DayViewCalendar').live('pagecreate', function(event) {
