@@ -2,7 +2,7 @@ var sessionId;
 //string, (json)object, function(data), function(data) OR 'DisplayMessages' 
 function CallService(ServiceName, Data, Success, Error) {
 	//alert(JSON.stringify(Data));
-
+	$.mobile.showPageLoadingMessage();
 	
 	$.ajax({
 		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
@@ -39,7 +39,7 @@ function CallService(ServiceName, Data, Success, Error) {
 			$("<li>Please verify data service, double check your Company Id, and try again.</li>")
 				.appendTo($("#errorList"));
 			
-		
+			$.mobile.hidePageLoadingMessage();
 			$.mobile.changePage($("#Validation"), {
 				transition : "pop"
 			});	
