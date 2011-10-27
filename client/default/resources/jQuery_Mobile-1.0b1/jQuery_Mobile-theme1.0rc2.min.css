@@ -660,6 +660,7 @@ input {
 
 .ui-dialog .ui-header {
 	border-width: 1px 1px 0 1px;
+	border-style:solid;
 }
 
 .ui-dialog.ui-body-b .ui-header {
@@ -686,5 +687,9 @@ input {
 }
 
 .ui-dialog .ui-header h1 {
-	font-size:12px;
+	font-size:14px;
+}
+
+.ui-dialog .ui-footer .ui-btn {
+	margin: 0 -16px;
 }
