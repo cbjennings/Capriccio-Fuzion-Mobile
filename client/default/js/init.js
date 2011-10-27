@@ -25,7 +25,7 @@ $fh.ready(function() {
       $("#txtPassword").val() && 
       $("#txtCompany").val()
 	) {
-      $.mobile.showPageLoadingMsg();
+      
       
       CallService(
     	'Login',

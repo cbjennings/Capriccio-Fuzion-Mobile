@@ -473,6 +473,9 @@ input {
 	box-shadow: inset 0 0 0 3px #ffdbaf;
 }
 
+.ui-checkbox input, .ui-radio input {
+	display:none;
+}
 
 .ui-checkbox .ui-btn {
 	border:0;
