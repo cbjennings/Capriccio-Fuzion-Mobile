@@ -28,8 +28,8 @@ $("#TimecardDetail").live(
 
 						var req = {
 								"id" : JSON.stringify($("#txtId").val()),
-								"starton" : JSON.stringify(starton.toDateString()+" "+starton.toTimeString()),
-								"endon" : JSON.stringify(endon.toDateString()+" "+endon.toTimeString()),
+								"starton" : JSON.stringify(starton.toDateString()+" "+formatTime(starton)),
+								"endon" : JSON.stringify(endon.toDateString()+" "+formatTime(endon)),
 								"comments" : JSON.stringify(comments),
 								"chargenumber" : JSON.stringify($("#txtChargeNumber").val()),
 								"reason" : JSON.stringify($("#txtReason").val())
