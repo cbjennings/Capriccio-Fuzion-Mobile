@@ -32,7 +32,8 @@ $("#TimecardDetail").live(
 								"endon" : JSON.stringify(endon.toDateString()+" "+formatTime(endon)),
 								"comments" : JSON.stringify(comments),
 								"chargenumber" : JSON.stringify($("#txtChargeNumber").val()),
-								"reason" : JSON.stringify($("#txtReason").val())
+								"reason" : JSON.stringify($("#txtReason").val()),
+								"sessionId":JSON.stringify(sessionId)
 						};
 						if(req.id===JSON.stringify("")) req.id=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
 						if(req.chargenumber===JSON.stringify(""))req.chargenumber=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
