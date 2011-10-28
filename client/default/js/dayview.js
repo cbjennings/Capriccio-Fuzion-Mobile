@@ -110,7 +110,7 @@ function goDay(date) {
 
 							).css(
 									"height",
-									(Math.round(hourHeight * TimeSpan)-1)
+									(Math.round(hourHeight * TimeSpan)-2)
 											+ "px").css("top",
 									Math.round(margintop+69) + "px")
 							.css("position", "absolute").data("id",
