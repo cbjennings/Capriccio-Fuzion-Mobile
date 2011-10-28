@@ -59,7 +59,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		data:Data,
 		timeout:10000,
 		success:function(d) {
-			var data=JSON.parse(d.d);
+			var res=JSON.parse(d.d);
 			//TODO:if NoSession message, try logging in again.
 			if(data.success===false && Error==="DisplayMessages") {
 				//Common error/validation message popup
