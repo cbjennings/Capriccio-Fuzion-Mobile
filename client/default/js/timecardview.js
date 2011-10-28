@@ -28,8 +28,8 @@ $("#TimecardDetail").live(
 
 						var req = {
 								"id" : JSON.stringify($("#txtId").val()),
-								"starton" : JSON.stringify(starton.toDateString()+" "+formatTime(starton)),
-								"endon" : JSON.stringify(endon.toDateString()+" "+formatTime(endon)),
+								"starton" : JSON.stringify(formatDateTime(starton)),
+								"endon" : JSON.stringify(formatDateTime(endon)),
 								"comments" : JSON.stringify(comments),
 								"chargenumber" : JSON.stringify($("#txtChargeNumber").val()),
 								"reason" : JSON.stringify($("#txtReason").val()),
@@ -181,7 +181,13 @@ function loadTimecard(id) {
 	
 }
 
+function formatDateTime(time) {
+	if(!time.getHours || !time.getDays) return "";
+	return starton.toDateString()+" "+formatTime(starton)
+}
+
 function formatTime(time) {
+	if(!time.getHours) return "";
 	var ret = "";
 	if (time.getHours() > 12) {
 		ret += (time.getHours() - 12) + ":";
