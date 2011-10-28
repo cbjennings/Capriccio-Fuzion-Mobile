@@ -58,7 +58,10 @@ function loadTimecard(id) {
 				(id.getMonth() + 1) + "/" + id.getDate() + "/"
 						+ id.getFullYear())
 		serviceName="newTimecard";
-		req={date : id.toString(), sessionId:sessionId};
+		req={
+				date : JSON.stringify(id.toDateString()), 
+				sessionId:JSON.stringify(sessionId)
+		};
 		success=function(res) {
 			$("#txtChargeNumber").html("").append(
 					$('<option value=""></option>'));
@@ -91,16 +94,19 @@ function loadTimecard(id) {
 		error="DisplayMessages";
 	} else {
 		serviceName="GetTimecard";
-		req={Id : id, sessionId:sessionId};
+		req={
+				Id : JSON.stringify(id), 
+				sessionId:JSON.stringify(sessionId)
+		};
 		success=function(res) {
-			var starton = new Date(res.timecard.starton);
+			var starton = new Date(parseInt(res.timecard.starton.substr(6)));
 			// alert(starton);
 			$("#TimecardFullDate").val(
 					(starton.getMonth() + 1) + "/" + starton.getDate() + "/"
 							+ starton.getFullYear());
 			// alert($("#TimecardFullDate").val());
 			
-			var endon=new Date(res.timecard.endon);
+			var endon=new Date(parseInt(res.timecard.endon.substr(6)));
 			var one_hour = 1000 * 60 * 60;
 			var TimeSpan = roundNumber(
 					(endon.getTime() - starton.getTime())
