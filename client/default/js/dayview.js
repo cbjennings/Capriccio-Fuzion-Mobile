@@ -147,7 +147,7 @@ function goDay(date) {
 
 $('#DayViewCalendar').live('pagecreate', function(event) {
 
-	$(document).scrollTop(150);
+	
 	$('#DayViewCalendar').live('swiperight', function(event) {
 		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() - 1);
@@ -193,5 +193,7 @@ $('#DayViewCalendar').live('pagecreate', function(event) {
 	$("#btnViewTimecardApproval").click(function() {
 		loadCurrentTimecardApproval();
 	});
+	
+	$(document).scrollTop(150);
 
 });
