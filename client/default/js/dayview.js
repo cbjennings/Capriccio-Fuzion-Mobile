@@ -91,7 +91,7 @@ function goDay(date) {
 											.append(
 													$("<p />")
 															.text(
-																	res.timecards[i].comments ?? "")
+																	res.timecards[i].comments)
 															.css(
 																	"border",
 																	"1px solid #666")
