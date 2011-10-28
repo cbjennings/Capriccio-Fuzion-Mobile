@@ -48,6 +48,22 @@ $("#TimecardDetail").live(
 						);
 					}
 			);
+			
+			$("#btnDeleteTimecard").click(function() {
+				var starton = new Date($("#TimecardFullDate").val() + " " + $("#txtStartOn").val());
+				var req = {
+						"id" : JSON.stringify($("#txtId").val()),
+						"sessionId":JSON.stringify(sessionId)
+				};
+				CallService( 
+						'DeleteTimecard', 
+						req, 
+						function(res) {
+							goDay(starton);
+						}, 
+						"DisplayMessages"
+				);
+			});
 		});
 
 function loadTimecard(id) {
