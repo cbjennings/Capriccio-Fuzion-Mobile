@@ -86,7 +86,7 @@ function loadTimecard(id) {
 			}
 			$("#txtReason").selectmenu('refresh');
 
-			$("#txtId").val(res.guid);
+			$("#txtId").val(res.timecard.Id);
 
 			$("#txtStartOn").val("");
 			$("#txtEndOn").val("");
@@ -106,6 +106,8 @@ function loadTimecard(id) {
 		success=function(res) {
 			var starton = new Date(parseInt(res.timecard.starton.substr(6)));
 			// alert(starton);
+			
+			$("#txtId").val(res.timecard.Id);
 			$("#TimecardFullDate").val(
 					(starton.getMonth() + 1) + "/" + starton.getDate() + "/"
 							+ starton.getFullYear());
