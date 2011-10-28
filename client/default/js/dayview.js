@@ -27,7 +27,7 @@ function goDay(date) {
 	setDate(date);
 	$("#entryList-contain").html("");
 	var adjusteddate = new Date(date);
-	adjusteddate.setDate(adjusteddate.getDate() - 1);
+	adjusteddate.setDate(adjusteddate.getDate());
 	CallService(
 			'getDate', 
 			{
@@ -36,7 +36,7 @@ function goDay(date) {
 			function(res) {
 				var hourHeight=600/24;
 				var d = new Date(parseInt(res.date.substr(6)));
-				d.setDate(d.getDate() + 1);
+				d.setDate(d.getDate());
 				setDate(d);
 				$("#entryList-contain")
 						.html(
