@@ -603,6 +603,12 @@ input {
 	color:#A3C0E8;
 }
 
+#entryList li span.ui-icon {
+	position:absolute;
+	top:11px;
+	right:3px;
+}
+
 
 .ui-navbar .ui-btn, .ui-header .ui-btn, .ui-footer .ui-btn {
 	border-width: 0 1px;
