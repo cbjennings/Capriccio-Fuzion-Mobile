@@ -27,12 +27,12 @@ $("#TimecardDetail").live(
 							comments = $("#txtComments").val();
 
 						var req = {
-								"id" : $("#txtId").val(),
-								"starton" : starton.getTime(),
-								"endon" : endon.getTime(),
-								"comments" : comments,
-								"chargenumber" : $("#txtChargeNumber").val(),
-								"reason" : $("#txtReason").val()
+								"id" : JSON.stringify($("#txtId").val()),
+								"starton" : JSON.stringify(starton.toDateString()+" "+starton.toTimeString()),
+								"endon" : JSON.stringify(endon.toDateString()+" "+endon.toTimeString()),
+								"comments" : JSON.stringify(comments),
+								"chargenumber" : JSON.stringify($("#txtChargeNumber").val()),
+								"reason" : JSON.stringify($("#txtReason").val())
 						};
 						CallService( 
 								'saveTimecard', 
