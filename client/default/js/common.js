@@ -80,8 +80,9 @@ function CallService(ServiceName, Data, Success, Error) {
 			} else {
 				Success(data);
 			}
-			return false;
 			$.mobile.hidePageLoadingMsg();
+			return false;
+			
 		},
 		error:function(jqXHR, textStatus, errorThrown) {
 			$("#errorList").html("");
