@@ -35,7 +35,7 @@ function goDay(date) {
 				sessionId:JSON.stringify(sessionId)},
 			function(res) {
 				var hourHeight=600/24;
-				var d = new Date(res.date.substr(6, res.date.length-2));
+				var d = new Date(parseInt(res.date.substr(6)));
 				d.setDate(d.getDate() + 1);
 				setDate(d);
 				$("#entryList-contain")
