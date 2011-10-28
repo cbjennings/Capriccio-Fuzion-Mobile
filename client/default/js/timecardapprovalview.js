@@ -3,11 +3,11 @@
  */
 function loadCurrentTimecardApproval() {
 	var adjusteddate = new Date($("#fkDate").val());
-	adjusteddate.setDate(adjusteddate.getDate() - 1);
+	adjusteddate.setDate(adjusteddate.getDate());
 
 	CallService('getCurrentTimecardApproval', {
-		date : adjustedDate,
-		sessionId : sessionId
+		date : JSON.stringify(adjusteddate.toDateString()),
+		sessionId : JSON.stringify(sessionId)
 	}, function(res) {
 		// alert(JSON.stringify(res));
 		$("#totalHoursReq").val(res.timecardApproval.totalHoursReq);
