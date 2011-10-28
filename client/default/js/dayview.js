@@ -137,7 +137,7 @@ function goDay(date) {
 					}
 					$("#entryList").append(li);
 				}
-				$("#entryList").listview();
+				if(res.timecards.length>0) $("#entryList").listview();
 			},
 			"DisplayMessages"
 	);
