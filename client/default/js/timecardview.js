@@ -90,7 +90,7 @@ function loadTimecard(id) {
 		};
 		error="DisplayMessages";
 	} else {
-		serviceName="getTimecard";
+		serviceName="GetTimecard";
 		req={Id : id, sessionId:sessionId};
 		success=function(res) {
 			var starton = new Date(res.timecard.starton);
