@@ -24,13 +24,12 @@ $(function() {
 		$("#txtCompany").val(company);
 	});
 
-	//$.mobile.changePage($("#Login"));
+	// $.mobile.changePage($("#Login"));
 	$("#btnLogin").click(
 			function() {
 				if ($("#txtUsername").val() && $("#txtPassword").val()
 						&& $("#txtCompany").val()) {
 
-					
 					CallService('Login', {
 						username : JSON.stringify($("#txtUsername").val()),
 						password : JSON.stringify($("#txtPassword").val())
@@ -68,5 +67,7 @@ $(function() {
 	if (user && pass && company)
 		$("#btnLogin").click();
 
-	$.mobile.fixedToolbars.setTouchToggleEnabled(false)
+	$("#Validation").live('pagecreate', function() {
+		$.mobile.fixedToolbars.setTouchToggleEnabled(false)
+	});
 });
