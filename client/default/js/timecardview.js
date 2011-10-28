@@ -123,7 +123,7 @@ function loadTimecard(id) {
 			
 			$("#txtComments").text(res.timecard.comments);
 
-			$("#txtChargeNumber").selectmenu();
+			$("#txtChargeNumber").selectmenu({"theme":"b"});
 			$("#txtChargeNumber").html("").append(
 					$('<option value=""></option>'));
 			for ( var i in res.chargenumbers) {
@@ -136,7 +136,7 @@ function loadTimecard(id) {
 			$("#txtChargeNumber").val(res.timecard.chargenumber);
 			$("#txtChargeNumber").selectmenu('refresh');
 
-			$("#txtReason").selectmenu();
+			$("#txtReason").selectmenu({"theme":"b"});
 			$("#txtReason").html("").append($('<option value=""></option>'));
 			for ( var i in res.reasons) {
 				var opt = $("<option />");
