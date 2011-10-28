@@ -72,7 +72,7 @@ function loadTimecard(id) {
 						.text(res.chargenumbers[i].name);
 				$("#txtChargeNumber").append(opt);
 			}
-			$("#txtChargeNumber").selectmenu('refresh', true);
+			$("#txtChargeNumber").selectmenu('refresh');
 
 			$("#txtReason").selectmenu();
 			$("#txtReason").html("").append($('<option value=""></option>'));
@@ -81,7 +81,7 @@ function loadTimecard(id) {
 				opt.val(res.reasons[i].id).text(res.reasons[i].name);
 				$("#txtReason").append(opt);
 			}
-			$("#txtReason").selectmenu('refresh', true);
+			$("#txtReason").selectmenu('refresh');
 
 			$("#txtId").val(res.guid);
 
