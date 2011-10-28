@@ -110,9 +110,9 @@ function goDay(date) {
 
 							).css(
 									"height",
-									Math.round(hourHeight * TimeSpan)
+									(Math.round(hourHeight * TimeSpan)-1)
 											+ "px").css("top",
-									Math.round(margintop+66) + "px")
+									Math.round(margintop+69) + "px")
 							.css("position", "absolute").data("id",
 									res.timecards[i].Id)
 							.click(function() {
@@ -126,7 +126,7 @@ function goDay(date) {
 						li.css("left", "15%");
 					} else {
 						float = "right";
-						li.css("right", "00");
+						li.css("right", "2px");
 					}
 
 					if ((res.timecards[(parseInt(i) - 1)] && res.timecards[(parseInt(i) - 1)].endon > res.timecards[i].starton)
