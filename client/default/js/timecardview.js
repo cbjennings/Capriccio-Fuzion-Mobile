@@ -42,9 +42,7 @@ $("#TimecardDetail").live(
 								'saveTimecard', 
 								req, 
 								function(res) {
-									$.mobile.changePage($("#DayViewCalendar"), {
-										reverse : true
-									});
+									goDay(starton);
 								}, 
 								"DisplayMessages"
 						);
