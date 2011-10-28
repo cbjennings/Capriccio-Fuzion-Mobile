@@ -47,8 +47,8 @@ function goDay(date) {
 				var float = "right";
 				for ( var i in res.timecards) {
 
-					var starton = new Date(res.timecards[i].starton);
-					var endon = new Date(res.timecards[i].endon);
+					var starton = new Date(parseInt(res.timecards[i].starton.substr(6)));
+					var endon = new Date(parseInt(res.timecards[i].endon.substr(6)));
 
 					var one_hour = 1000 * 60 * 60;
 					var TimeSpan = roundNumber(
