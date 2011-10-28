@@ -63,7 +63,7 @@ function loadTimecard(id) {
 				sessionId:JSON.stringify(sessionId)
 		};
 		success=function(res) {
-			$("#txtChargeNumber").selectmenu();
+			$("#txtChargeNumber").selectmenu({"theme":"b"});
 			$("#txtChargeNumber").html("").append(
 					$('<option value=""></option>'));
 			for ( var i in res.chargenumbers) {
@@ -74,7 +74,7 @@ function loadTimecard(id) {
 			}
 			$("#txtChargeNumber").selectmenu('refresh');
 
-			$("#txtReason").selectmenu();
+			$("#txtReason").selectmenu({"theme":"b"});
 			$("#txtReason").html("").append($('<option value=""></option>'));
 			for ( var i in res.reasons) {
 				var opt = $("<option />");
