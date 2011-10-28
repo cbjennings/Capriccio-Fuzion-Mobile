@@ -31,8 +31,8 @@ function goDay(date) {
 	CallService(
 			'getDate', 
 			{
-				date:adjusteddate.toMSJSON(),
-				sessionId:sessionId},
+				date:JSON.stringify(adjusteddate.toMSJSON()),
+				sessionId:JSON.stringify(sessionId)},
 			function(res) {
 				var hourHeight=600/24;
 				var d = new Date(res.date);
