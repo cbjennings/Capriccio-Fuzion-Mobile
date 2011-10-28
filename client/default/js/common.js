@@ -57,7 +57,7 @@ function CallService(ServiceName, Data, Success, Error) {
 		//url:"https://capricciofuzion.com/"+$("#txtCompany").val()+"/web/WebServices/MobileService.asmx/"+ServiceName,
 		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
 		data:Data,
-		timeout:10000,
+		timeout:15000,
 		success:function(d) {
 			var data=JSON.parse(d.d);
 			//TODO:if NoSession message, try logging in again.
