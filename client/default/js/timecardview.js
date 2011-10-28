@@ -86,8 +86,7 @@ function loadTimecard(id) {
 			}
 			$("#txtReason").selectmenu('refresh');
 
-			$("#txtId").val(res.timecard.Id);
-
+			$("#txtId").val(res.id);
 			$("#txtStartOn").val("");
 			$("#txtEndOn").val("");
 			$("#txtComments").text("");
