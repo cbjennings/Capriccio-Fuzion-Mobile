@@ -497,11 +497,11 @@ input {
 }
 
 
-.ui-fieldcontain.ui-body-b select {
+.ui-field-contain.ui-body-b select {
 	border:1px solid #A3C0E8;
 }
 
-.ui-fieldcontain.ui-body-b select option {
+.ui-fieldc-ontain.ui-body-b select option {
 	border-bottom:1px solid #A3C0E8;
 }
 
