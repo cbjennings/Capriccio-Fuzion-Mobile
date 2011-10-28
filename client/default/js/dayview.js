@@ -147,7 +147,7 @@ function goDay(date) {
 
 $('#DayViewCalendar').live('pagecreate', function(event) {
 
-	$("#entryList-contain").scrollTop(300);
+	$(document).scrollTop(200);
 	$('#DayViewCalendar').live('swiperight', function(event) {
 		var d = $("#DayViewCalendar").data("currdate");
 		d.setDate(d.getDate() - 1);
