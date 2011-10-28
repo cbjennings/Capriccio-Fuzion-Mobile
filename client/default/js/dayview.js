@@ -114,7 +114,7 @@ function goDay(date) {
 											+ "px").css("top",
 									Math.round(margintop+66) + "px")
 							.css("position", "absolute").data("id",
-									res.timecards[i].id)
+									res.timecards[i].Id)
 							.click(function() {
 
 								loadTimecard($(this).data("id"));
