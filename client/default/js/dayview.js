@@ -138,6 +138,7 @@ function goDay(date) {
 					$("#entryList").append(li);
 				}
 				if(res.timecards.length>0) $("#entryList").listview();
+				$.mobile.changePage($("#DayViewCalendar"));
 			},
 			"DisplayMessages"
 	);
