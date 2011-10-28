@@ -128,7 +128,7 @@ function loadTimecard(id) {
 			}
 
 			$("#txtChargeNumber").val(res.timecard.chargenumber);
-			$("#txtChargeNumber").selectmenu('refresh', true);
+			$("#txtChargeNumber").selectmenu();
 
 			$("#txtReason").html("").append($('<option value=""></option>'));
 			for ( var i in res.reasons) {
@@ -138,7 +138,7 @@ function loadTimecard(id) {
 			}
 
 			$("#txtReason").val(res.timecard.reason);
-			$("#txtReason").selectmenu('refresh', true);
+			$("#txtReason").selectmenu();
 
 			$("#mileageList").live('click', function() {
 				loadMileage($("#txtId").val());
