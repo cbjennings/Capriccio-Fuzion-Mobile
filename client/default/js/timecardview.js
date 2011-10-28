@@ -34,9 +34,9 @@ $("#TimecardDetail").live(
 								//"chargenumber" : JSON.stringify($("#txtChargeNumber").val()),
 								//"reason" : JSON.stringify($("#txtReason").val())
 						};
-						if(req.id===JSON.stringify("")) req.id=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
-						if(req.chargenumber===JSON.stringify(""))req.chargenumber=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
-						if(req.reason===JSON.stringify(""))req.reason=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
+						//if(req.id===JSON.stringify("")) req.id=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
+						//if(req.chargenumber===JSON.stringify(""))req.chargenumber=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
+						//if(req.reason===JSON.stringify(""))req.reason=JSON.stringify("{00000000-0000-0000-0000-000000000000}");
 						CallService( 
 								'saveTimecard', 
 								req, 
