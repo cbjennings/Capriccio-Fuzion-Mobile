@@ -34,6 +34,9 @@ $("#TimecardDetail").live(
 								"chargenumber" : JSON.stringify($("#txtChargeNumber").val()),
 								"reason" : JSON.stringify($("#txtReason").val())
 						};
+						if(req.id==="") req.id=null;
+						if(req.chargenumber==="")req.chargenumber=null;
+						if(req.reason==="")req.reason=null;
 						CallService( 
 								'saveTimecard', 
 								req, 
