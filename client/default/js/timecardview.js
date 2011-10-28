@@ -114,7 +114,7 @@ function loadTimecard(id) {
 			$("#txtStartOn").val(formatTime(starton));
 			$("#txtEndOn").val(formatTime(endon));
 			
-			$("#txtStartOn,#txtEndOn").datebox();
+			$("#txtStartOn,#txtEndOn").datebox().datebox('refresh');
 			
 			$("#TimecardDetailHeader h1").text(TimeSpan + " hours - " + res.timecard.comments)
 			
