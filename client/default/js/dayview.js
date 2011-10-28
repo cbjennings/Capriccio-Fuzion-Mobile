@@ -127,7 +127,7 @@ function goDay(date) {
 						li.css("left", "15%");
 					} else {
 						float = "right";
-						li.css("right", "0");
+						li.css("right", "-2px");
 					}
 
 					if ((res.timecards[(parseInt(i) - 1)] && res.timecards[(parseInt(i) - 1)].endon > res.timecards[i].starton)
