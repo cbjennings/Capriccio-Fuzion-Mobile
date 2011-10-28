@@ -13,7 +13,7 @@ function setDate(d) {
 	$("#DayViewCalendar").data("currdate", d);
 	curr_month++;
 	var curr_year = d.getFullYear();
-	$("#fkDate").val(curr_year + "-" + curr_month + "=" + curr_date);
+	$("#fkDate").val(curr_year + "-" + curr_month + "-" + curr_date);
 	if (curr_date.toString().length == 1)
 		curr_date = "0" + curr_date.toString();
 	if (curr_month.toString().length == 1)
