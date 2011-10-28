@@ -111,10 +111,11 @@ function loadTimecard(id) {
 			var TimeSpan = roundNumber(
 					(endon.getTime() - starton.getTime())
 							/ (one_hour), 2);
+			$("#txtStartOn,#txtEndOn").datebox();
 			$("#txtStartOn").val(formatTime(starton));
 			$("#txtEndOn").val(formatTime(endon));
 			
-			$("#txtStartOn,#txtEndOn").datebox().datebox('refresh');
+			
 			
 			$("#TimecardDetailHeader h1").text(TimeSpan + " hours - " + res.timecard.comments)
 			
