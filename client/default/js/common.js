@@ -49,7 +49,7 @@ function CallService(ServiceName, Data, Success, Error) {
 	
 	$.getJSONP({
 		//url:"https://capricciofuzion.com/"+$("#txtCompany").val()+"/web/WebServices/MobileService.asmx/"+ServiceName,
-		url:"http://localhost:59703/WebServices/MobileService.asmx/"+ServiceName,
+		url:"http://localhost:63727/WebServices/MobileService.asmx/"+ServiceName,
 		data:Data,
 		timeout:15000,
 		success:function(d) {
