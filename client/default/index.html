@@ -198,6 +198,10 @@
 	<div data-role="content">
 		<form id="TimecardApprovalForm">
 			<ul data-role="listview" data-theme="b">
+				<li  data-role="fieldcontain" style="display:none;">
+					<label for="totalHoursReq">Total Hours Required:</label>
+					<input type="text" name="tcaId" id="tcaId" value="" />
+				</li>
 				<li  data-role="fieldcontain">
 					<label for="totalHoursReq">Total Hours Required:</label>
 					<input type="text" name="totalHoursReq" id="totalHoursReq" value="" />
@@ -214,6 +218,10 @@
 					<label for="totalExclHours">Total Exclusion Hours:</label>
 					<input type="text" name="totalExclHours" id="totalExclHours" value="" />
 				</li>
+				<li  data-role="fieldcontain">
+					<label for="totalHoursReq">Status:</label>
+					<input type="text" name="tcaStatus" id="tcaStatus" value="" />
+				</li>
 			</ul>
 
 		</form>
@@ -222,6 +230,9 @@
 		<a href="#" id="btnSubmitTimecardApproval" data-role="button" data-icon="submit-approval"
 			data-iconpos="left" data-inline="true"
 			style="float:left;">Submit</a>
+		<a href="#" id="btnUnSubmitTimecardApproval" data-role="button" data-icon="submit-approval"
+			data-iconpos="left" data-inline="true"
+			style="float:left;">UnSubmit</a>
 	</div>
 </div>
 <script src="resources/jquery-1.6.3.min.js" type="text/javascript"></script>

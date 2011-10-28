@@ -5,15 +5,29 @@ function loadCurrentTimecardApproval() {
 	var adjusteddate = new Date($("#fkDate").val());
 	adjusteddate.setDate(adjusteddate.getDate());
 
-	CallService('getCurrentTimecardApproval', {
+	CallService('GetTimecardApproval', {
 		date : JSON.stringify(adjusteddate.toDateString()),
 		sessionId : JSON.stringify(sessionId)
 	}, function(res) {
 		// alert(JSON.stringify(res));
 		$("#totalHoursReq").val(res.timecardApproval.totalHoursReq);
 		$("#totalHours").val(res.timecardApproval.totalHours);
-		$("#totalChargeHours").val(res.timecardApproval.totalHours);
+		$("#totalChargeHours").val(res.timecardApproval.totalChargeHours);
 		$("#totalExclHours").val(res.timecardApproval.totalExclHours);
+		$("#tcaStatus").val(res.timecardApproval.status);
+		$("#tcaId").val(res.timecardApproval.id);
+		
+		if(res.timecardApproval.status==="Submitted"){
+			$("#btnSubmitTimecardApproval").hide();
+			$("#btnUnSubmitTimecardApproval").show();
+		} else if (res.timecardApproval.status==="Approved") {
+			$("#btnSubmitTimecardApproval").hide();
+			$("#btnUnSubmitTimecardApproval").hide();
+		} else {
+			$("#btnSubmitTimecardApproval").show();
+			$("#btnUnSubmitTimecardApproval").hide();
+		}
+		
 		$.mobile.changePage($("#TimecardApprovalDetail"));
 	}, "DisplayMessages");
 
@@ -42,41 +56,37 @@ $("#TimecardApprovalDetail")
 												"#TimecardApprovalDialog .ui-header a:jqmData(icon='delete')")
 												.remove();
 									});
+					$("#btnUnSubmitTimecardApproval").click( 
+							function() {
+								
+								CallService(
+										"UnSubmitApproval",
+										{
+												Id:JSON.stringify($("#tcaId").val()),
+												sessionId: JSON.stringify(sessionId)
+										},
+										function() {
+											loadCurrentTimecardApproval();											
+										},
+										"DisplayMessages"								
+								);
+							}
+					);
 
 					$("#btnConfirmYes").click(
 							function() {
 
-								$.mobile.showPageLoadingMsg();
-								var guid = "somemagicguid";
-								var req = {
-									"guid" : guid
-								};
-
-								$fh.act({
-									act : 'submitTimecardApproval',
-									secure : true,
-									req : req
-								}, function(res) {
-									if (res.success)
-										$.mobile.changePage(
-												$("#DayViewCalendar"), {
-													reverse : true
-												});
-									else {
-										$("#errorList").html("");
-
-										for ( var i in res.messages) {
-											$(
-													"<li>" + res.messages[i]
-															+ "</li>")
-													.appendTo($("#errorList"));
-										}
-										$.mobile.changePage($("#Validation"), {
-											transition : "pop"
-										});
-									}
-									$.mobile.hidePageLoadingMsg();
-								});
+								CallService(
+										"UnSubmitApproval",
+										{
+												Id:JSON.stringify($("#tcaId").val()),
+												sessionId: JSON.stringify(sessionId)	
+										},
+										function() {
+											loadCurrentTimecardApproval();											
+										},
+										"DisplayMessages"								
+								);
 							});
 
 				});
