@@ -613,9 +613,7 @@ input {
 }
 
 #entryList li span.ui-icon {
-	position:absolute;
-	top:11px;
-	right:3px;
+	display:none;
 }
 
 
@@ -667,6 +665,9 @@ input {
 
 
 /*  dialogs  */
+ #Validation .ui-header a:ui-icon-delete {
+ 	display:none;
+ }
  
 .ui-navbar span.ui-obj-icon, .ui-dialog .ui-header span.ui-obj-icon  {
 	float:left;
