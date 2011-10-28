@@ -1,7 +1,7 @@
 //Ready Function
 $(function() {
 
-	$.mobile.selectmenu.prototype.options.nativeMenu = false;
+	$.mobile.selectmenu.prototype.options.nativeMenu = true;
 	var user, pass, company;
 	$fh.data({
 		key : 'username'
