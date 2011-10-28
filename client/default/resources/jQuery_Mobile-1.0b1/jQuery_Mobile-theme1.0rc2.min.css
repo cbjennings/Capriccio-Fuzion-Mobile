@@ -620,6 +620,10 @@ input {
 
 
 /*  Drop Downs */
+.ui-input-datebox div.ui-input-datebox {
+	border:0 !important;
+}
+
 .ui-selectmenu-list .ui-btn-up-b {
 	background: #fff;
 }
