@@ -1,12 +1,6 @@
 var sessionId;
 
 
-Date.prototype.toMSJSON = function () {
-	  var date = '/Date(' + this.getTime() + ')/';
-	  return date;
-	};
-
-	
 // fn to handle jsonp with timeouts and errors
 // hat tip to Ricardo Tomasi for the timeout logic
 $.getJSONP = function(s) {
