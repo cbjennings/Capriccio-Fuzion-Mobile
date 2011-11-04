@@ -77,7 +77,7 @@ $("#TimecardApprovalDetail")
 							function() {
 
 								CallService(
-										"UnSubmitApproval",
+										"SubmitApproval",
 										{
 												Id:JSON.stringify($("#tcaId").val()),
 												sessionId: JSON.stringify(sessionId)	
