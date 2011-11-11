@@ -239,15 +239,23 @@
 	<div data-role="header" data-theme="b">
 		<img src="Logo.png" />
 		<div class="ui-tab-container">
-			<div class="ui-obj-icon ui-icon-left ui-icon-timecard tab" data-iconpos="left" data-icon="timecard">Timecards</div>
-			<div class="ui-obj-icon ui-icon-left ui-icon-expense  tab selected" data-iconpos="left" data-icon="expense">Expenses</div>
+			<div class="tab" data-iconpos="left" data-icon="timecard">Timecards</div>
+			<div class="tab selected" data-iconpos="left" data-icon="expense">Expenses</div>
 		</div>	
 		
-		<div data-icon="timecard-approval" data-iconpos="left" data-role="navbar">
+		<div data-icon="expense" data-iconpos="left" data-role="navbar">
 			<span class="ui-obj-icon ui-icon ui-icon-expense"></span><h1>Expenses</h1>
 		</div>
 	</div>
 	<div data-role="content">
+		<ul data-role="listview" data-theme="b">
+			<li>
+				<p class="ui-li-aside ui-li-desc">11/10/2011</p>
+				<h3 class="ui-li-heading">Okinawa Trip</h3>
+				<p class="ui-li-desc">$310.11</p>
+				<p class="ui-li-desc">Approved</p>
+			</li>
+		</ul>
 	</div>
 	<div data-role="footer"  data-theme="b" data-position="fixed">
 		<a href="#" id="btnSubmitTimecardApproval" data-role="button" data-icon="new"
