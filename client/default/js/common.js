@@ -105,10 +105,10 @@ $(document).bind("mobileinit", function(){
 	  $.extend(  $.mobile , {
 	    loadingMessage: "Loading..."
 	  });
-	  $(".selected .tab:jqmData(icon='expense')").click(function() {
+	  $(".ui-tab-container .tab:jqmData(icon='expense')").click(function() {
 		  $.mobile.changePage($("#ExpenseList"));
 	  });
-	  $(".selected .tab:jqmData(icon='timecard')").click(function() {
+	  $(".ui-tab-container .tab:jqmData(icon='timecard')").click(function() {
 		  $.mobile.changePage($("#DayViewCalendar"));
 	  });
 	});
